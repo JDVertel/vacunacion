@@ -3,9 +3,8 @@
   <div class="container">
     <dir class="row">
       <div class="col-6"><img src="../img/logo.png" alt="" class="logo" /></div>
-      <div class="col-6"><h6>Dashboard</h6></div>
     </dir>
-   
+    <div><h6 class="display-6 text-center">Dashboard</h6></div>
     <br>
 
     <div class="row">
@@ -14,7 +13,7 @@
           <v-icon name="bi-truck" class="card-img-top iconos"/>
           <div class="card-body">
             <p class="card-text">
-              <RouterLink to="/proveedores">Vacunas</RouterLink>
+              <RouterLink to="/vacunas">Vacunas</RouterLink>
             </p>
           </div>
         </div>
@@ -24,7 +23,7 @@
           <v-icon name="ri-customer-service-2-line" class="card-img-top iconos"/>
           <div class="card-body">
             <p class="card-text">
-              <RouterLink to="/clientes">Pacientes</RouterLink>
+              <RouterLink to="/pacientes">Pacientes</RouterLink>
             </p>
           </div>
         </div>
@@ -34,7 +33,7 @@
           <v-icon name="hi-solid-users" class="card-img-top iconos"/>
           <div class="card-body">
             <p class="card-text">
-              <RouterLink to="/usuarios">Aplicaciones</RouterLink>
+              <RouterLink to="/aplicaciones">Aplicaciones</RouterLink>
             </p>
           </div>
         </div>
@@ -44,7 +43,7 @@
           <v-icon name="la-product-hunt" class="card-img-top iconos"/>
           <div class="card-body">
             <p class="card-text">
-              <RouterLink to="/productos">Esquemas</RouterLink>
+              <RouterLink to="/esquemas">Esquemas</RouterLink>
             </p>
           </div>
         </div>
@@ -54,7 +53,7 @@
           <v-icon name="si-materialdesignicons" class="card-img-top iconos"/>
           <div class="card-body">
             <p class="card-text">
-              <RouterLink to="/materiales">Neveras</RouterLink>
+              <RouterLink to="/neveras">Neveras</RouterLink>
             </p>
           </div>
         </div>
@@ -64,7 +63,7 @@
           <v-icon name="hi-document-report" class="card-img-top iconos"/>
           <div class="card-body">
             <p class="card-text">
-              <RouterLink to="/informes">Usuarios</RouterLink>
+              <RouterLink to="/usuarios">Usuarios</RouterLink>
             </p>
           </div>
         </div>
@@ -74,7 +73,7 @@
           <v-icon name="md-output-outlined" class="card-img-top iconos"/>
           <div class="card-body">
             <p class="card-text">
-              <RouterLink to="/produccion">Entidades </RouterLink>
+              <RouterLink to="/entidades">Entidades </RouterLink>
             </p>
           </div>
         </div>
@@ -84,7 +83,7 @@
           <v-icon name="md-bordercolor-outlined" class="card-img-top iconos"/>
           <div class="card-body">
             <p class="card-text">
-              <RouterLink to="/pedidos">Informes</RouterLink>
+              <RouterLink to="/informes">Informes</RouterLink>
             </p>
           </div>
         </div>
@@ -94,7 +93,7 @@
           <v-icon name="md-shoppingcart-outlined" class="card-img-top iconos"/>
           <div class="card-body">
             <p class="card-text">
-              <RouterLink to="/ventas">Admin</RouterLink>
+              <RouterLink to="/administracion">Admin</RouterLink>
             </p>
           </div>
         </div>
@@ -104,7 +103,7 @@
           <v-icon name="md-shoppingcart-outlined" class="card-img-top iconos"/>
           <div class="card-body">
             <p class="card-text">
-              <RouterLink to="/ventas">Parametros</RouterLink>
+              <RouterLink to="/parametros">Parametros</RouterLink>
             </p>
           </div>
         </div>

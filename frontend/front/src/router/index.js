@@ -22,6 +22,67 @@ const router = createRouter({
 
       component: () => import('../views/adminView.vue')
     }
+    ,
+    /*  */
+    {
+      path: '/vacunas',
+      name: 'vacunas',
+
+      component: () => import('../views/VacunasView.vue')
+    }
+    ,
+    {
+      path: '/informes',
+      name: 'informes',
+
+      component: () => import('../views/informesView.vue')
+    },
+    {
+      path: '/administracion',
+      name: 'administracion',
+
+      component: () => import('../views/administracionView.vue')
+    }
+  ,   {
+    path: '/aplicaciones',
+    name: 'aplicaciones',
+
+    component: () => import('../views/aplicacionesView.vue')
+  },   {
+    path: '/entidades',
+    name: 'entidades',
+
+    component: () => import('../views/entidadesView.vue')
+  },   {
+    path: '/esquemas',
+    name: 'esquemas',
+
+    component: () => import('../views/esquemasView.vue')
+  },   {
+    path: '/neveras',
+    name: 'neveras',
+
+    component: () => import('../views/neverasView.vue')
+  },
+     {
+      path: '/usuarios',
+      name: 'usuarios',
+
+      component: () => import('../views/usuariosView.vue')
+    }
+    ,
+       {
+      path: '/pacientes',
+      name: 'pacientes',
+
+      component: () => import('../views/pacientesView.vue')
+    },
+       {
+      path: '/parametros',
+      name: 'parametros',
+
+      component: () => import('../views/parametrosView.vue')
+    }
   ]
 })
 

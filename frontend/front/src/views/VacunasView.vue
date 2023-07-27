@@ -1,0 +1,144 @@
+<template>
+  <h1>vacunas</h1>
+
+
+  <br>
+  <div class="row">
+    <div class="col-10"> <h6>Listado de Vacunas del sistema</h6></div>
+    <div class="col-2"><button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#ModalVacunas">+</button> </div>
+  </div>
+ 
+<br>
+<div class="table-responsive">
+  <table class="table table-sm table-bordered">
+    <thead>
+ 
+      <tr  class="table-primary ">
+        <th scope="col">CUPS</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Opc</th>
+      </tr>
+   
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Mark</td>
+        <td><button class="btn btn-warning btn-sm">edit</button></td>
+        
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Jacob</td>
+        <td><button class="btn btn-warning btn-sm">edit</button></td>
+        
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Larry the Bird</td>
+        <td><button class="btn btn-warning btn-sm">edit</button></td>
+      </tr>
+    </tbody>
+
+  </table>
+
+</div>
+
+
+
+<div class="modal fade" id="ModalVacunas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Vacuna</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+       <!--  ... -->
+       
+  <div class="container">
+    <div class="row">
+      <div class="col-6 col-sm-3">
+      <input class="form-control form-control-sm" type="text" placeholder="Codigo CUPS" >
+    </div>
+    <div class="col-6 col-sm-3">
+      <input class="form-control form-control-sm" type="text" placeholder="Nombre Biologico" >
+    </div>
+    <div class="col-6 col-sm-3">
+   
+      <select class="form-select" aria-label="Default select example">
+        <option selected>Dosis Aplicables</option>
+        <option value="1">U</option>
+        <option value="2">1-2</option>
+        <option value="3">1-2-1r</option>
+        <option value="4">1-2-1r-2r</option>
+      </select>
+    </div>
+    
+    <div class="col-6 col-sm-3">
+
+      <select class="form-select" aria-label="Default select example">
+        <option selected>Aplicacion</option>
+        <option value="I">Inyectable</option>
+        <option value="O">Oral</option>
+      </select>
+
+    </div>
+    <div class="col-6 col-sm-3">
+      <select class="form-select" aria-label="Default select example">
+        <option selected>Diluyente</option>
+        <option value="1">SI</option>
+        <option value="0">NO</option>
+      </select>
+    </div>
+    <div class="col-6 col-sm-3">
+      <select class="form-select" aria-label="Default select example">
+        <option selected>Calibre Jeringa</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="25">25</option>
+        <option value="26">26</option>       
+      </select>
+    </div>
+    <div class="col-6 col-sm-3">
+      <select class="form-select" aria-label="Default select example">
+        <option selected>Sexo</option>
+        <option value="A">Ambos</option>
+        <option value="M">Masculino</option>
+        <option value="F">Femenino</option>
+        
+      </select>
+    </div>
+    </div>
+    
+    
+    </div>
+       <!--  -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</template>
+
+<script>
+export default {
+
+}
+</script>
+
+<style>
+th{
+  font-weight: bold; 
+}
+</style>
