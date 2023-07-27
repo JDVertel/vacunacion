@@ -85,65 +85,101 @@
               >
                 <div class="accordion-body">
                   <div class="container">
-                    <div class="row">
-                      <div class="col-6 col-sm-3">
-                        <input
-                          class="form-control form-control-sm"
-                          type="text"
-                          placeholder="Codigo CUPS"
-                        />
-                      </div>
-                      <div class="col-6 col-sm-3">
-                        <input
-                          class="form-control form-control-sm"
-                          type="text"
-                          placeholder="Nombre Biologico"
-                        />
-                      </div>
-                      <div class="col-6 col-sm-3">
+                    <div class="row mb-3">
+                      <div class="col-6">
                         <select
                           class="form-select"
-                          aria-label="Default select example"
+                          aria-label="Default select example" 
+                          selected v-model="data.tipodoc"
                         >
-                          <option selected>Dosis Aplicables</option>
-                          <option value="1">U</option>
-                          <option value="2">1-2</option>
-                          <option value="3">1-2-1r</option>
-                          <option value="4">1-2-1r-2r</option>
+                          <option>Tipo Documento</option>
+                          <option value="CCM">CC Madre</option>
+                          <option value="RC">Registro Civil</option>
+                          <option value="TI">Tarjeta de identidad</option>
+                          <option value="CC">Cedula de Ciudadania</option>
+                          <option value="CE">Cedula de Extrangeria</option>
+                          <option value="PA">Pasaporte</option>
                         </select>
                       </div>
+                      <div class="col-6">
+                    
+                        <input
+                          class="form-control form-control-sm"
+                          type="text"
+                          placeholder="Numero documento"
+                          selected v-model="data.numdoc"
+                        />
+                      </div>
+                    </div>
 
-                      <div class="col-6 col-sm-3">
+                    <div class="row">
+                      <div class="col-6 col-sm-4">
+                        <input
+                          class="form-control form-control-sm"
+                          type="text"
+                          placeholder="Nombre1"
+                          v-model="data.name1"
+                        />
+                      </div>
+                      <div class="col-6 col-sm-4">
+                        <input
+                          class="form-control form-control-sm"
+                          type="text"
+                          placeholder="Nombre2"
+                          v-model="data.name2"
+                        />
+                      </div>
+                      <div class="col-6 col-sm-4">
+                        <input
+                          class="form-control form-control-sm"
+                          type="text"
+                          placeholder="Apellido1"
+                          v-model="data.apell1"
+                        />
+                      </div>
+                      <div class="col-6 col-sm-4">
+                        <input
+                          class="form-control form-control-sm"
+                          type="text"
+                          placeholder="Apellido2"
+                          v-model="data.apell2"
+                        />
+                      </div>
+                      <div class="col-6 col-sm-4">
                         <select
                           class="form-select"
                           aria-label="Default select example"
+                          v-model="data.sexo"
                         >
-                          <option selected>Aplicacion</option>
-                          <option value="I">Inyectable</option>
-                          <option value="O">Oral</option>
+                          <option selected>Sexo</option>
+                          <option value="M">Masculino</option>
+                          <option value="F">Femenino</option>
+                          <option value="I">Indeterminado</option>
                         </select>
                       </div>
-                      <div class="col-6 col-sm-3">
-                        <select
-                          class="form-select"
-                          aria-label="Default select example"
-                        >
-                          <option selected>Diluyente</option>
-                          <option value="1">SI</option>
-                          <option value="0">NO</option>
-                        </select>
+                      <div class="col-6 col-sm-4">
+                        <input
+                          class="form-control form-control-sm"
+                          type="date"
+                          placeholder="Fecha nacimiento"
+                          v-model="data.fnaciiento"
+                        />
                       </div>
-                      <div class="col-6 col-sm-3">
-                        <select
-                          class="form-select"
-                          aria-label="Default select example"
-                        >
-                          <option selected>Calibre Jeringa</option>
-                          <option value="22">22</option>
-                          <option value="23">23</option>
-                          <option value="25">25</option>
-                          <option value="26">26</option>
-                        </select>
+                      <div class="col-6 col-sm-4">
+                        <input
+                          class="form-control form-control-sm"
+                          type="text"
+                          placeholder="Telefono"
+                          v-model="data.tel"
+                        />
+                      </div>
+                      <div class="col-6 col-sm-8">
+                        <input
+                          class="form-control form-control-sm"
+                          type="text"
+                          placeholder="Direccion"
+                          v-model="data.dir"
+                        />
                       </div>
                     </div>
                   </div>
@@ -169,67 +205,7 @@
               >
                 <div class="accordion-body">
                   <div class="container">
-                    <div class="row">
-                      <div class="col-6 col-sm-3">
-                        <input
-                          class="form-control form-control-sm"
-                          type="text"
-                          placeholder="Codigo CUPS"
-                        />
-                      </div>
-                      <div class="col-6 col-sm-3">
-                        <input
-                          class="form-control form-control-sm"
-                          type="text"
-                          placeholder="Nombre Biologico"
-                        />
-                      </div>
-                      <div class="col-6 col-sm-3">
-                        <select
-                          class="form-select"
-                          aria-label="Default select example"
-                        >
-                          <option selected>Dosis Aplicables</option>
-                          <option value="1">U</option>
-                          <option value="2">1-2</option>
-                          <option value="3">1-2-1r</option>
-                          <option value="4">1-2-1r-2r</option>
-                        </select>
-                      </div>
-
-                      <div class="col-6 col-sm-3">
-                        <select
-                          class="form-select"
-                          aria-label="Default select example"
-                        >
-                          <option selected>Aplicacion</option>
-                          <option value="I">Inyectable</option>
-                          <option value="O">Oral</option>
-                        </select>
-                      </div>
-                      <div class="col-6 col-sm-3">
-                        <select
-                          class="form-select"
-                          aria-label="Default select example"
-                        >
-                          <option selected>Diluyente</option>
-                          <option value="1">SI</option>
-                          <option value="0">NO</option>
-                        </select>
-                      </div>
-                      <div class="col-6 col-sm-3">
-                        <select
-                          class="form-select"
-                          aria-label="Default select example"
-                        >
-                          <option selected>Calibre Jeringa</option>
-                          <option value="22">22</option>
-                          <option value="23">23</option>
-                          <option value="25">25</option>
-                          <option value="26">26</option>
-                        </select>
-                      </div>
-                    </div>
+                <h1>no disponible en este prototipo</h1>
                   </div>
                 </div>
               </div>
@@ -253,155 +229,100 @@
               >
                 <div class="accordion-body">
                   <div class="container">
-                    <div class="row">
-                      <div class="col-6 col-sm-3">
-                        <input
-                          class="form-control form-control-sm"
-                          type="text"
-                          placeholder="Codigo CUPS"
-                        />
-                      </div>
-                      <div class="col-6 col-sm-3">
-                        <input
-                          class="form-control form-control-sm"
-                          type="text"
-                          placeholder="Nombre Biologico"
-                        />
-                      </div>
-                      <div class="col-6 col-sm-3">
-                        <select
-                          class="form-select"
-                          aria-label="Default select example"
-                        >
-                          <option selected>Dosis Aplicables</option>
-                          <option value="1">U</option>
-                          <option value="2">1-2</option>
-                          <option value="3">1-2-1r</option>
-                          <option value="4">1-2-1r-2r</option>
-                        </select>
-                      </div>
-
-                      <div class="col-6 col-sm-3">
-                        <select
-                          class="form-select"
-                          aria-label="Default select example"
-                        >
-                          <option selected>Aplicacion</option>
-                          <option value="I">Inyectable</option>
-                          <option value="O">Oral</option>
-                        </select>
-                      </div>
-                      <div class="col-6 col-sm-3">
-                        <select
-                          class="form-select"
-                          aria-label="Default select example"
-                        >
-                          <option selected>Diluyente</option>
-                          <option value="1">SI</option>
-                          <option value="0">NO</option>
-                        </select>
-                      </div>
-                      <div class="col-6 col-sm-3">
-                        <select
-                          class="form-select"
-                          aria-label="Default select example"
-                        >
-                          <option selected>Calibre Jeringa</option>
-                          <option value="22">22</option>
-                          <option value="23">23</option>
-                          <option value="25">25</option>
-                          <option value="26">26</option>
-                        </select>
-                      </div>
-                    </div>
+                    <h1>no disponible en este prototipo</h1>
                   </div>
                 </div>
               </div>
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse4" aria-expanded="false" aria-controls="panelsStayOpen-collapse4">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapse4"
+                  aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapse4"
+                >
                   Condicion Usuaria
                 </button>
               </h2>
-              <div id="panelsStayOpen-collapse4" class="accordion-collapse collapse">
+              <div
+                id="panelsStayOpen-collapse4"
+                class="accordion-collapse collapse"
+              >
                 <div class="accordion-body">
-                  <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  <h1>no disponible en este prototipo</h1>
                 </div>
               </div>
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse5" aria-expanded="false" aria-controls="panelsStayOpen-collapse5">
-                Historico de Antecedentes
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapse5"
+                  aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapse5"
+                >
+                  Historico de Antecedentes
                 </button>
               </h2>
-              <div id="panelsStayOpen-collapse5" class="accordion-collapse collapse">
+              <div
+                id="panelsStayOpen-collapse5"
+                class="accordion-collapse collapse"
+              >
                 <div class="accordion-body">
-                  <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  <h1>no disponible en este prototipo</h1>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item" v-if="data.tipodoc==='CCM' || data.tipodoc==='RC' || data.tipodoc==='TI'">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapse6"
+                  aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapse6"
+                >
+                  Datos de la Madre
+                </button>
+              </h2>
+              <div
+                id="panelsStayOpen-collapse6"
+                class="accordion-collapse collapse"
+              >
+                <div class="accordion-body">
+                  <h1>no disponible en este prototipo</h1>
                 </div>
               </div>
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse6" aria-expanded="false" aria-controls="panelsStayOpen-collapse6">
-                 Datos de la Madre
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapse7"
+                  aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapse7"
+                >
+                  Datos del Cuidador
                 </button>
               </h2>
-              <div id="panelsStayOpen-collapse6" class="accordion-collapse collapse">
+              <div
+                id="panelsStayOpen-collapse7"
+                class="accordion-collapse collapse"
+              >
                 <div class="accordion-body">
-                  <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  <h1>no disponible en este prototipo</h1>
                 </div>
               </div>
             </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse7" aria-expanded="false" aria-controls="panelsStayOpen-collapse7">
-               Datos del Cuidador
-                </button>
-              </h2>
-              <div id="panelsStayOpen-collapse7" class="accordion-collapse collapse">
-                <div class="accordion-body">
-                  <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                </div>
-              </div>
-            </div>
-            <!--    <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse8" aria-expanded="false" aria-controls="panelsStayOpen-collapse8">
-                  Datos de Vacunador
-                </button>
-              </h2>
-              <div id="panelsStayOpen-collapse8" class="accordion-collapse collapse">
-                <div class="accordion-body">
-                  <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                </div>
-              </div>
-            </div>
-         <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse9" aria-expanded="false" aria-controls="panelsStayOpen-collapse9">
-                  Accordion Item #2
-                </button>
-              </h2>
-              <div id="panelsStayOpen-collapse9" class="accordion-collapse collapse">
-                <div class="accordion-body">
-                  <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse10" aria-expanded="false" aria-controls="panelsStayOpen-collapse10">
-                  Accordion Item #2
-                </button>
-              </h2>
-              <div id="panelsStayOpen-collapse10" class="accordion-collapse collapse">
-                <div class="accordion-body">
-                  <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                </div>
-              </div>
-            </div> -->
+
           </div>
 
           <!--  -->
@@ -418,13 +339,32 @@
           </button>
           <button type="button" class="btn btn-primary">Guardar</button>
         </div>
+      {{ data.tipodoc }} {{ data.numdoc }}
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+data(){
+  return{
+    data:[]
+  }
+}
+
+};
 </script>
 
-<style></style>
+<style scoped>
+input{
+margin:5px!important;
+}
+
+
+select.form-select{
+font-size: 0.9rem!important;
+padding:4px;
+margin:5px!important;
+}
+</style>
