@@ -73,7 +73,7 @@
                   class="form-control form-control-sm"
                   type="text"
                   placeholder="Codigo CUPS"
-                  v-model="vacuna.cups"
+                  v-model="cups"
                 />
               </div>
               <div class="col-6 col-sm-4">
@@ -81,12 +81,12 @@
                   class="form-control form-control-sm"
                   type="text"
                   placeholder="Nombre Biologico"
-                  v-model="vacuna.nombre"
+                  v-model="nombre"
                 />
               </div>
               <div class="col-6 col-sm-4">
-                <select class="form-select" v-model="vacuna.dosis">
-                  <option disabled value="">Dosis Aplicables</option>
+                <select class="form-select" v-model="dosis">
+                  <option value="">Dosis Aplicables</option>
                   <option value="1">U</option>
                   <option value="2">1-2</option>
                   <option value="3">1-2-1r</option>
@@ -98,9 +98,9 @@
                 <select
                   class="form-select"
                   aria-label="Default select example"
-                  v-model="vacuna.aplicacion"
+                  v-model="aplicacion"
                 >
-                  <option selected>Aplicacion</option>
+                  <option value="">Aplicacion</option>
                   <option value="I">Inyectable</option>
                   <option value="O">Oral</option>
                 </select>
@@ -109,9 +109,9 @@
                 <select
                   class="form-select"
                   aria-label="Default select example"
-                  v-model="vacuna.diluyente"
+                  v-model="diluyente"
                 >
-                  <option selected>Diluyente</option>
+                  <option value="">Diluyente</option>
                   <option value="1">SI</option>
                   <option value="0">NO</option>
                 </select>
@@ -120,9 +120,9 @@
                 <select
                   class="form-select"
                   aria-label="Default select example"
-                  v-model="vacuna.jeringa"
+                  v-model="jeringa"
                 >
-                  <option selected>Calibre Jeringa</option>
+                  <option value="">Calibre Jeringa</option>
                   <option value="22">22</option>
                   <option value="23">23</option>
                   <option value="25">25</option>
@@ -133,9 +133,9 @@
                 <select
                   class="form-select"
                   aria-label="Default select example"
-                  v-model="vacuna.sexo"
+                  v-model="sexo"
                 >
-                  <option selected>Sexo</option>
+                  <option value="">Sexo</option>
                   <option value="A">Ambos</option>
                   <option value="M">Masculino</option>
                   <option value="F">Femenino</option>
@@ -165,6 +165,11 @@ export default {
   data() {
     return {
       vacuna: [],
+      dosis: "",
+      aplicacion: "",
+      diluyente: "",
+      jeringa: "",
+      sexo: "",
     };
   },
 };

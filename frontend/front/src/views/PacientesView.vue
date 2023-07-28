@@ -90,9 +90,9 @@
                         <select
                           class="form-select"
                           aria-label="Default select example" 
-                          selected v-model="data.tipodoc"
+                          selected v-model="tipodoc"
                         >
-                          <option>Tipo Documento</option>
+                          <option value="">Tipo Documento</option>
                           <option value="CCM">CC Madre</option>
                           <option value="RC">Registro Civil</option>
                           <option value="TI">Tarjeta de identidad</option>
@@ -107,7 +107,7 @@
                           class="form-control form-control-sm"
                           type="text"
                           placeholder="Numero documento"
-                          selected v-model="data.numdoc"
+                          selected v-model="numdoc"
                         />
                       </div>
                     </div>
@@ -118,7 +118,7 @@
                           class="form-control form-control-sm"
                           type="text"
                           placeholder="Nombre1"
-                          v-model="data.name1"
+                          v-model="name1"
                         />
                       </div>
                       <div class="col-6 col-sm-4">
@@ -126,7 +126,7 @@
                           class="form-control form-control-sm"
                           type="text"
                           placeholder="Nombre2"
-                          v-model="data.name2"
+                          v-model="name2"
                         />
                       </div>
                       <div class="col-6 col-sm-4">
@@ -134,7 +134,7 @@
                           class="form-control form-control-sm"
                           type="text"
                           placeholder="Apellido1"
-                          v-model="data.apell1"
+                          v-model="apell1"
                         />
                       </div>
                       <div class="col-6 col-sm-4">
@@ -142,16 +142,16 @@
                           class="form-control form-control-sm"
                           type="text"
                           placeholder="Apellido2"
-                          v-model="data.apell2"
+                          v-model="apell2"
                         />
                       </div>
                       <div class="col-6 col-sm-4">
                         <select
                           class="form-select"
                           aria-label="Default select example"
-                          v-model="data.sexo"
+                          v-model="sexo"
                         >
-                          <option selected>Sexo</option>
+                          <option value="">Sexo</option>
                           <option value="M">Masculino</option>
                           <option value="F">Femenino</option>
                           <option value="I">Indeterminado</option>
@@ -162,7 +162,8 @@
                           class="form-control form-control-sm"
                           type="date"
                           placeholder="Fecha nacimiento"
-                          v-model="data.fnaciiento"
+                          v-model="fnacimiento"
+
                         />
                       </div>
                       <div class="col-6 col-sm-4">
@@ -170,7 +171,7 @@
                           class="form-control form-control-sm"
                           type="text"
                           placeholder="Telefono"
-                          v-model="data.tel"
+                          v-model="tel"
                         />
                       </div>
                       <div class="col-6 col-sm-8">
@@ -178,7 +179,7 @@
                           class="form-control form-control-sm"
                           type="text"
                           placeholder="Direccion"
-                          v-model="data.dir"
+                          v-model="dir"
                         />
                       </div>
                     </div>
@@ -278,7 +279,7 @@
                 </div>
               </div>
             </div>
-            <div class="accordion-item" v-if="data.tipodoc==='CCM' || data.tipodoc==='RC' || data.tipodoc==='TI'">
+            <div class="accordion-item" v-if="tipodoc==='CCM' || tipodoc==='RC' || tipodoc==='TI'">
               <h2 class="accordion-header">
                 <button
                   class="accordion-button collapsed"
@@ -339,7 +340,7 @@
           </button>
           <button type="button" class="btn btn-primary">Guardar</button>
         </div>
-      {{ data.tipodoc }} {{ data.numdoc }}
+      {{ tipodoc }} {{ numdoc }}
       </div>
     </div>
   </div>
@@ -349,7 +350,9 @@
 export default {
 data(){
   return{
-    data:[]
+    data:[],
+    tipodoc:'',
+    sexo:'',
   }
 }
 
