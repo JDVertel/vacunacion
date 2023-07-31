@@ -72,10 +72,10 @@ const router = createRouter({
     }
     ,
        {
-      path: '/pacientes',
-      name: 'pacientes',
+      path: '/registro',
+      name: 'registro',
 
-      component: () => import('../views/pacientesView.vue')
+      component: () => import('../views/registroView.vue')
     },
        {
       path: '/parametros',

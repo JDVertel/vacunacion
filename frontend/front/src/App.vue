@@ -1,32 +1,37 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import { RouterLink, RouterView } from "vue-router";
+import HelloWorld from "./components/HelloWorld.vue";
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/img/2.png" width="180" height="125" />
+  <div class="container">
+    <header>
+      <img
+        alt="Vue logo"
+        class="logo"
+        src="@/img/2.png"
+        width="180"
+        height="125"
+      />
 
-    <div class="wrapper">
-    
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/dashboard">Dashboard</RouterLink>
-      </nav>
-    </div>
-    
-  </header>
-
-
-  <RouterView />
+      <div class="wrapper">
+        <nav>
+          <RouterLink to="/">Home</RouterLink>
+          <RouterLink to="/about">About</RouterLink>
+          <RouterLink to="/dashboard">Dashboard</RouterLink>
+        </nav>
+      </div>
+      <RouterView />
+    </header>
+  </div>
 </template>
 
 <style scoped>
 header {
   line-height: 1.5;
   max-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .logo {
@@ -65,10 +70,13 @@ nav a:first-of-type {
     place-items: center;
     padding-right: calc(var(--section-gap) / 2);
   }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
 }
+
+.logo {
+  margin: 0 2rem 0 0;
+}
+div.modal-body{
+  font-size: 0.5rem!important;
+}
+
 </style>
