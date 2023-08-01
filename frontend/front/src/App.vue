@@ -5,24 +5,18 @@ import HelloWorld from "./components/HelloWorld.vue";
 
 <template>
   <div class="container">
-    <header>
-      <img
-        alt="Vue logo"
-        class="logo"
-        src="@/img/2.png"
-        width="180"
-        height="125"
-      />
 
-      <div class="wrapper">
-        <nav>
-          <RouterLink to="/">Home</RouterLink>
-          <RouterLink to="/about">About</RouterLink>
-          <RouterLink to="/dashboard">Dashboard</RouterLink>
-        </nav>
-      </div>
-      <RouterView />
-    </header>
+
+    <img alt="Vue logo" class="logo" src="@/img/2.png" width="180" height="125" />
+    <nav>
+      <RouterLink to="/">Home</RouterLink>
+      <RouterLink to="/about">About</RouterLink>
+      <RouterLink to="/dashboard">Dashboard</RouterLink>
+    </nav>
+    <br>
+    <RouterView />
+
+
   </div>
 </template>
 
@@ -30,13 +24,14 @@ import HelloWorld from "./components/HelloWorld.vue";
 header {
   line-height: 1.5;
   max-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+}
+.container{
+display: flex !important;
+    flex-direction: column !important;
+    justify-content: center!important;
+    align-items: center!important;
+    font-size: 0.8rem !important;
 }
 
 nav {
@@ -72,11 +67,8 @@ nav a:first-of-type {
   }
 }
 
-.logo {
-  margin: 0 2rem 0 0;
-}
-div.modal-body{
-  font-size: 0.5rem!important;
-}
 
+div.modal-body {
+  font-size: 0.5rem !important;
+}
 </style>
