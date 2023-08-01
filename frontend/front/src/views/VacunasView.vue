@@ -55,7 +55,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Vacuna</h1>
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Vacunas</h1>
           <button
             type="button"
             class="btn-close"
@@ -84,15 +84,7 @@
                   v-model="nombre"
                 />
               </div>
-              <div class="col-6 col-sm-4">
-                <select class="form-select" v-model="dosis">
-                  <option value="">Dosis Aplicables</option>
-                  <option value="1">U</option>
-                  <option value="2">1-2</option>
-                  <option value="3">1-2-1r</option>
-                  <option value="4">1-2-1r-2r</option>
-                </select>
-              </div>
+     
 
               <div class="col-6 col-sm-4">
                 <select
@@ -143,6 +135,7 @@
               </div>
             </div>
           </div>
+          {{ cups }}  {{ nombre }} {{ dosis }}
           <!--  -->
         </div>
         <div class="modal-footer">
@@ -165,14 +158,19 @@ export default {
   data() {
     return {
       vacuna: [],
-      dosis: "",
+
       aplicacion: "",
       diluyente: "",
       jeringa: "",
       sexo: "",
-    };
+      cups: "",
+      nombre: ""
+    }
   },
+
+  
 };
+
 </script>
 
 <style>
