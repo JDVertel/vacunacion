@@ -30,7 +30,7 @@
         <th>829001846-6</th>
         <td>Ese Barrancabermeja</td>
         <td>Activa</td>
-        <td><button type="button" class="btn btn-warning btn-sm">x</button></td>
+        <td><button type="button" class="btn btn-warning btn-sm">x</button><button type="button" class="btn btn-danger btn-sm">Bloq</button></td>
       </tr>
   
     </tbody>

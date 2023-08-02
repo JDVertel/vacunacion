@@ -37,19 +37,21 @@
           </thead>
           <tbody>
             <tr>
-              <td>Mark</td>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-              <td>Otto</td>
+              <td>
+                Recien Nacido
+              </td>
+              <td>123456</td>
+              <td>Hepatitis A</td>
+              <td>si</td>
+              <td>U</td>
               <td><button type="button" class="btn btn-primary btn-sm">edit</button></td>
             </tr>
             <tr>
-              <td>Mark</td>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-              <td>Otto</td>
+              <td>5 meses</td>
+              <td>654789</td>
+              <td>Toxoide</td>
+              <td>no</td>
+              <td>2da</td>
               <td><button type="button" class="btn btn-primary btn-sm">edit</button></td>
             </tr>
           </tbody>
