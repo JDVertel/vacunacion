@@ -83,28 +83,28 @@
       <div class="row">
         <div class="col-6">
           <div class="input-group input-group-sm mb-3">
-            <span class="input-group-text" id="addon-wrapping">Color Primario</span>
+            <span class="input-group-text" id="addon-wrapping">1 Color</span>
             <input type="color" class="form-control" placeholder="Username" aria-label="Username"
               aria-describedby="addon-wrapping">
           </div>
         </div>
         <div class="col-6">
           <div class="input-group input-group-sm mb-3">
-            <span class="input-group-text" id="addon-wrapping">Color Secundario</span>
+            <span class="input-group-text" id="addon-wrapping">2 Color</span>
             <input type="color" class="form-control" placeholder="Username" aria-label="Username"
               aria-describedby="addon-wrapping">
           </div>
         </div>
         <div class="col-6">
           <div class="input-group input-group-sm mb-3">
-            <span class="input-group-text" id="addon-wrapping">Color Terciario</span>
+            <span class="input-group-text" id="addon-wrapping">3 Color</span>
             <input type="color" class="form-control" placeholder="Username" aria-label="Username"
               aria-describedby="addon-wrapping">
           </div>
         </div>
         <div class="col-6">
           <div class="input-group input-group-sm mb-3">
-            <span class="input-group-text" id="addon-wrapping">Color Fondo</span>
+            <span class="input-group-text" id="addon-wrapping">Fondo</span>
             <input type="color" class="form-control" placeholder="Username" aria-label="Username"
               aria-describedby="addon-wrapping">
           </div>
