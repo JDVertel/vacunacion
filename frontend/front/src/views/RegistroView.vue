@@ -78,12 +78,15 @@
             <div class="accordion" id="accordionPanelsStayOpenExample">
 
               <div class="container">
-               edad: {{ p_edad }} / sexo: {{ p_sexo }} / gestante: {{ p_gestante }}
+                edad: {{ p_edad }} / sexo: {{ p_sexo }} / gestante: {{ p_gestante }}
+
+                {{ calcularEdad }}
+           
 
               </div>
 
               <hr>
-              <div class="accordion-item" v-if="p_edad > 1">
+              <div class="accordion-item" v-if="calcularEdad.mesest > 1">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#panelsStayOpen-collapse1" aria-expanded="false"
@@ -104,7 +107,7 @@
                 </div>
               </div>
 
-              <div class="accordion-item" v-if="p_edad > 60">
+              <div class="accordion-item" v-if="calcularEdad.mesest > 2">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#panelsStayOpen-collapse2" aria-expanded="false"
@@ -126,7 +129,7 @@
               </div>
 
 
-              <div class="accordion-item" v-if="p_edad > 120">
+              <div class="accordion-item" v-if="calcularEdad.mesest > 4">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#panelsStayOpen-collapse3" aria-expanded="false"
@@ -146,7 +149,7 @@
                   </div>
                 </div>
               </div>
-              <div class="accordion-item" v-if="p_edad > 182">
+              <div class="accordion-item" v-if="calcularEdad.mesest > 6">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#panelsStayOpen-collapse4" aria-expanded="false"
@@ -166,7 +169,7 @@
                   </div>
                 </div>
               </div>
-              <div class="accordion-item" v-if="p_edad > 210">
+              <div class="accordion-item" v-if="calcularEdad.mesest > 7">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#panelsStayOpen-collapse5" aria-expanded="false"
@@ -186,7 +189,7 @@
                   </div>
                 </div>
               </div>
-              <div class="accordion-item" v-if="p_edad > 241">
+              <div class="accordion-item" v-if="calcularEdad.mesest > 12">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#panelsStayOpen-collapse6" aria-expanded="false"
@@ -206,7 +209,7 @@
                   </div>
                 </div>
               </div>
-              <div class="accordion-item" v-if="p_edad > 366">
+              <div class="accordion-item" v-if="calcularEdad.mesest > 18">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#panelsStayOpen-collapse7" aria-expanded="false"
@@ -226,7 +229,7 @@
                   </div>
                 </div>
               </div>
-              <div class="accordion-item" v-if="p_edad > 1460">
+              <div class="accordion-item" v-if="calcularEdad.mesest > 60">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#panelsStayOpen-collapse8" aria-expanded="false"
@@ -246,7 +249,7 @@
                   </div>
                 </div>
               </div>
-              <div class="accordion-item" v-if="p_edad > 3285 && p_edad <= 6205 && p_sexo == 'f'">
+              <div class="accordion-item" v-if="calcularEdad.mesest > 108 && calcularEdad.mesest <= 204 && p_sexo == 'f'">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#panelsStayOpen-collapse9" aria-expanded="false"
@@ -266,7 +269,7 @@
                   </div>
                 </div>
               </div>
-              <div class="accordion-item" v-if="p_edad > 365  && p_sexo == 'm'">
+              <div class="accordion-item" v-if="calcularEdad.mesest > 1 && p_sexo == 'm'">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#panelsStayOpen-collapse10" aria-expanded="false"
@@ -286,7 +289,7 @@
                   </div>
                 </div>
               </div>
-              <div class="accordion-item" v-if="p_edad > 3650 && p_edad <= 17885 && p_sexo == 'f' && p_gestante == 'no'">
+              <div class="accordion-item" v-if="calcularEdad.anos > 10  && p_sexo == 'f' && p_gestante == 'no'">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#panelsStayOpen-collapse11" aria-expanded="false"
@@ -306,7 +309,7 @@
                   </div>
                 </div>
               </div>
-              <div class="accordion-item" v-if="p_edad > 18250 && p_edad <= 54750">
+              <div class="accordion-item" v-if="calcularEdad.anos > 50 ">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#panelsStayOpen-collapse12" aria-expanded="false"
@@ -326,7 +329,7 @@
                   </div>
                 </div>
               </div>
-              <div class="accordion-item" v-if="p_edad > 3650 && p_edad <= 17885 && p_sexo == 'f' && p_gestante == 'si'">
+              <div class="accordion-item" v-if="calcularEdad.anos > 10 && p_sexo == 'f' && p_gestante == 'si'">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#panelsStayOpen-collapse13" aria-expanded="false"
@@ -346,7 +349,7 @@
                   </div>
                 </div>
               </div>
-              <div class="accordion-item" v-if="p_edad > 365 && p_edad <= 1825">
+              <div class="accordion-item" v-if="calcularEdad.anos > 1 ">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#panelsStayOpen-collapse14" aria-expanded="false"
@@ -595,8 +598,8 @@
 </template>
 
 <script>
-
-
+import moment from "moment";
+import calculaedadVue from '../components/calculaedad.vue';
 export default {
   data() {
     return {
@@ -605,16 +608,38 @@ export default {
       numdoc: '',
       sexo: '',
       /* datos a cargar al momento de consultar  */
-      p_edad: 365*40,
-      p_sexo: "f",
-      p_gestante: "no"
+      fnacimiento: "05/05/1981",
+      p_sexo: "m",
+      p_gestante: "no",
+
+    }
+  },
+
+  computed: {
+
+    calcularEdad() {
+
+      var hoy = moment();
+      var cumpleanos = moment(this.fnacimiento, "DD/MM/YYYY");
+      var diff = hoy.diff(cumpleanos, "days");
+      var anos = Math.floor(diff / 365);
+      var meses = Math.floor((diff % 365) / 30);
+      var dias = diff % 30;
+      var mesest = hoy.diff(this.fnacimiento, 'months');
+
+
+
+      return { anos: anos, meses: meses, dias: dias, mesest: mesest };
+
     }
   }
+
 
 };
 </script>
 
-<style>input {
+<style>
+input {
   margin: 5px !important;
 }
 
@@ -639,4 +664,5 @@ input.form-control {
 
 .parametrosbusqueda {
   background-color: rgb(239, 239, 233);
-}</style>
+}
+</style>

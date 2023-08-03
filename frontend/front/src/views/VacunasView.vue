@@ -37,7 +37,7 @@
           <td>Ambos</td>
           <td><button class="btn btn-warning btn-sm">edit</button></td>
         </tr>
-   
+
       </tbody>
     </table>
   </div>
@@ -111,6 +111,7 @@
 
 <script>
 export default {
+
   data() {
     return {
       vacuna: [],
