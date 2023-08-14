@@ -35,7 +35,8 @@
           <td>{{ vacuna.diluyente }}</td>
           <td>{{ vacuna.jeringa }}</td>
           <td>{{ vacuna.sexo }}</td>
-          <td><button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#ModalEVacunas">edit</button>
+      
+          <td><button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#ModalEVacunas" >edit</button>
           </td>
         </tr>
 
@@ -109,7 +110,7 @@
     </div>
   </div>
 
-  <div class="modal fade" id="ModalEVacunas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!--   <div class="modal fade" id="ModalEVacunas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -117,34 +118,34 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <!--  ... -->
+
 
           <div class="container">
             <div class="row">
               <div class="col-6 col-sm-4">
-                <input class="form-control form-control-sm" type="text" placeholder="Codigo CUPS" v-model="cups" />
+                <input class="form-control form-control-sm" type="text" placeholder="Codigo CUPS" v-model="e_cups" />
               </div>
               <div class="col-6 col-sm-4">
-                <input class="form-control form-control-sm" type="text" placeholder="Nombre Biologico" v-model="nombre" />
+                <input class="form-control form-control-sm" type="text" placeholder="Nombre Biologico" v-model="e_nombre" />
               </div>
 
 
               <div class="col-6 col-sm-4">
-                <select class="form-select" aria-label="Default select example" v-model="aplicacion">
+                <select class="form-select" aria-label="Default select example" v-model="e_aplicacion">
                   <option value="">Aplicacion</option>
                   <option value="I">Inyectable</option>
                   <option value="O">Oral</option>
                 </select>
               </div>
               <div class="col-6 col-sm-4">
-                <select class="form-select" aria-label="Default select example" v-model="diluyente">
+                <select class="form-select" aria-label="Default select example" v-model="e_diluyente">
                   <option value="">Diluyente</option>
                   <option value="si">SI</option>
                   <option value="no">NO</option>
                 </select>
               </div>
               <div class="col-6 col-sm-4">
-                <select class="form-select" aria-label="Default select example" v-model="jeringa">
+                <select class="form-select" aria-label="Default select example" v-model="e_jeringa">
                   <option value="">Calibre Jeringa</option>
                   <option value="22">22</option>
                   <option value="23">23</option>
@@ -153,7 +154,7 @@
                 </select>
               </div>
               <div class="col-6 col-sm-4">
-                <select class="form-select" aria-label="Default select example" v-model="sexo">
+                <select class="form-select" aria-label="Default select example" v-model="e_sexo">
                   <option value="">Sexo</option>
                   <option value="A">Ambos</option>
                   <option value="M">Masculino</option>
@@ -162,8 +163,8 @@
               </div>
             </div>
           </div>
-          {{ cups }} {{ nombre }} {{ dosis }}
-          <!--  -->
+   
+
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
@@ -173,7 +174,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 </template>
 
 <script>
@@ -206,10 +207,18 @@ export default {
       sexo: "",
       cups: "",
       nombre: ""
+
+   
     }
+
   },
 
+  methods: {
+    guardarVacuna() {
+  
+}
 
+  },
 };
 
 </script>
