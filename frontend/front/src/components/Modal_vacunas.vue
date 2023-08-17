@@ -5,10 +5,11 @@
     <div class="modal2-overlay" v-if="b_title">
     </div>
   </transition>
+
   <transition>
     <div class="modal2">
-      <h4>{{ t_title }} Vacuna </h4>
-      <hr>
+      <h4 class="display-6">{{ t_title }} Vacuna </h4>
+     
       <div class="container">
         <div class="row">
           <div class="col-12 col-sm-4">
@@ -50,9 +51,9 @@
           </div>
         </div>
       </div>
-      <hr>
+  <br>
       <button class="btn_c" @click="ocultar"> Cerrar</button>
-      <button class="btn_e" @click="guardar"> {{b_title}} </button>
+      <button class="btn_e" @click="guardar"> {{ b_title }} </button>
 
     </div>
 
@@ -63,20 +64,21 @@
 export default {
 
   /*  lo que viene del pádre hacia el hijo*/
-  props: ['t_title', 'b_title', 'datos' ],
+  props: ['t_title', 'b_title', 'datos'],
 
   data() {
 
     return {
       estadomodal: false,
       id: this.datos.id,
-      cups: this.datos.cups,
-      nombre: this.datos.nombre,
-      aplicacion: this.datos.aplicacion,
-      diluyente: this.datos.diluyente,
-      jeringa: this.datos.jeringa,
-      sexo: this.datos.sexo,
-      guarda: []
+      cups: this.datos.cups  || "",
+      nombre: this.datos.nombre || "",
+      aplicacion: this.datos.aplicacion  || "",
+      diluyente: this.datos.diluyente  || "",
+      jeringa: this.datos.jeringa  || "",
+      sexo: this.datos.sexo  || "",
+      guarda: [],
+      crea:[]
     }
   },
 
@@ -90,6 +92,7 @@ export default {
     guardar() {
       /* lo que viaja al padre desde el hijo */
       /*   this.$emit('rta_hijo', this.estadomodal); */
+
       this.guarda.cups = this.cups
       this.guarda.nombre = this.nombre
       this.guarda.aplicacion = this.aplicacion
@@ -97,7 +100,22 @@ export default {
       this.guarda.jeringa = this.jeringa
       this.guarda.sexo = this.sexo
       this.guarda.cups = this.cups
-      console.log(this.guarda)
+
+      if (this.id >0) {
+      
+        console.log("editar registro exitosamente")
+
+             console.log(this.guarda)
+      } else {
+ 
+        console.log("registro nuevo")
+        console.log(this.guarda)
+      }
+
+
+
+
+
     }
   }
 }
@@ -106,6 +124,7 @@ export default {
 
 <style scoped>
 .modal2-overlay {
+
   position: absolute;
   top: 0;
   left: 0;
@@ -117,6 +136,7 @@ export default {
 }
 
 .modal2 {
+
   position: fixed;
   top: 50%;
   left: 50%;

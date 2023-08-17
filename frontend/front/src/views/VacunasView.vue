@@ -1,10 +1,11 @@
 <template>
-  <h1>vacunas</h1>
+
 
   <br />
+  <div class="container">
   <div class="row">
     <div class="col-10">
-      <h6>Listado de Vacunas del sistema</h6>
+      <h6 class="display-6">Listado de Vacunas del sistema</h6>
     </div>
     <div class="col-2">
       <button class="btnm" @click="mostrar(vacuna)" v-if="!mostrarmodal"> + nuevo</button>
@@ -26,7 +27,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="vacuna in vacunas">
+        <tr v-for="vacuna in consultavacunas">
           <td>{{ vacuna.cups }} </td>
           <td>{{ vacuna.nombre }}</td>
           <td>{{ vacuna.aplicacion }}</td>
@@ -42,12 +43,12 @@
 
 
   <modal :datos="uregistro" :t_title="titulot" :b_title="titulob" v-if="mostrarmodal" @rta_hijo="this.mostrarmodal = $event" />
-
+  </div>
   <!--    -->
 </template>
 
 <script>
-import Modal from "../components/Vacunas_Modal.vue";
+import Modal from "../components/Modal_vacunas.vue";
 
 export default {
   components: {
@@ -59,7 +60,7 @@ export default {
       titulot: "",
       titulob:"",
       mostrarmodal: false,
-      vacunas: [
+      consultavacunas: [
         {
           id: 1,
           aplicacion: "I",
