@@ -7,7 +7,7 @@
       <h6>Listado de Vacunas del sistema</h6>
     </div>
     <div class="col-2">
-
+      <button class="btnm" @click="mostrar(vacuna)" v-if="!mostrarmodal"> + nuevo</button>
     </div>
   </div>
 
@@ -33,46 +33,35 @@
           <td>{{ vacuna.diluyente }}</td>
           <td>{{ vacuna.jeringa }}</td>
           <td>{{ vacuna.sexo }}</td>
-
-          <td> <button class="btnm" @click="mostrar" v-if="!mostrarmodal"> activar</button>
+          <td> <button class="btnm" @click="mostrar(vacuna)" v-if="!mostrarmodal">Editar</button>
           </td>
         </tr>
-
       </tbody>
     </table>
   </div>
 
 
-  <modal title="titulodesdepadre" v-if="mostrarmodal" @rta_hijo="this.mostrarmodal = $event" />
+  <modal :datos="uregistro" :t_title="titulot" :b_title="titulob" v-if="mostrarmodal" @rta_hijo="this.mostrarmodal = $event" />
 
   <!--    -->
 </template>
 
 <script>
-import Modal from "./../components/Modal.vue";
+import Modal from "../components/Vacunas_Modal.vue";
 
 export default {
-
-
-
   components: {
     Modal
   },
-
-
-
   data() {
-
     return {
+      vacuna: "",
+      titulot: "",
+      titulob:"",
       mostrarmodal: false,
-      aplicacion: "",
-      diluyente: "",
-      jeringa: "",
-      sexo: "",
-      cups: "",
-      nombre: "",
       vacunas: [
         {
+          id: 1,
           aplicacion: "I",
           diluyente: "si",
           jeringa: "25",
@@ -81,27 +70,27 @@ export default {
           nombre: "HEPATITIS B"
         },
         {
+          id: 45,
           aplicacion: "I",
-          diluyente: "NO",
+          diluyente: "no",
           jeringa: "25",
           sexo: "A",
           cups: "CUB456",
           nombre: "pfizer"
         }
       ],
-
-
-
+      uregistro: []
     }
-
-
   },
 
 
   methods: {
-    mostrar() {
+    mostrar(vacuna) {
       this.mostrarmodal = !this.mostrarmodal,
-        console.log(this.mostrarmodal)
+        this.uregistro = vacuna;
+      console.log(this.mostrarmodal)
+      if (vacuna) { this.titulot = "Editar", this.titulob="Editar"  }
+      else { this.titulot = "Agregar Nueva", this.titulob = "Guardar" }
     }
   }
 }

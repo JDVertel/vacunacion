@@ -2,14 +2,12 @@
 <!-- componente de modal accesible desde dualquier -->
 <template>
   <transition>
-    <div class="modal2-overlay" v-if="title">
+    <div class="modal2-overlay" v-if="b_title">
     </div>
   </transition>
   <transition>
-
-
     <div class="modal2">
-      <h4>{{ title }} vacunas </h4>
+      <h4>{{ t_title }} Vacuna </h4>
       <hr>
       <div class="container">
         <div class="row">
@@ -29,8 +27,8 @@
           <div class="col-12 col-sm-4">
             <select class="form-select" aria-label="Default select example" v-model="diluyente">
               <option value="">Diluyente</option>
-              <option value="1">SI</option>
-              <option value="0">NO</option>
+              <option value="si">SI</option>
+              <option value="no">NO</option>
             </select>
           </div>
           <div class="col-12 col-sm-4">
@@ -54,8 +52,7 @@
       </div>
       <hr>
       <button class="btn_c" @click="ocultar"> Cerrar</button>
-      <button class="btn_e" @click="guardar"> Editar</button>
-
+      <button class="btn_e" @click="guardar"> {{b_title}} </button>
 
     </div>
 
@@ -66,18 +63,20 @@
 export default {
 
   /*  lo que viene del pádre hacia el hijo*/
-  props: ['title'],
+  props: ['t_title', 'b_title', 'datos' ],
 
   data() {
 
     return {
       estadomodal: false,
-      cups: "",
-      nombre: "",
-      aplicacion: "",
-      diluyente: "",
-      jeringa: "",
-      sexo: "",
+      id: this.datos.id,
+      cups: this.datos.cups,
+      nombre: this.datos.nombre,
+      aplicacion: this.datos.aplicacion,
+      diluyente: this.datos.diluyente,
+      jeringa: this.datos.jeringa,
+      sexo: this.datos.sexo,
+      guarda: []
     }
   },
 
@@ -91,7 +90,14 @@ export default {
     guardar() {
       /* lo que viaja al padre desde el hijo */
       /*   this.$emit('rta_hijo', this.estadomodal); */
-      console.log(this.estadomodal)
+      this.guarda.cups = this.cups
+      this.guarda.nombre = this.nombre
+      this.guarda.aplicacion = this.aplicacion
+      this.guarda.diluyente = this.diluyente
+      this.guarda.jeringa = this.jeringa
+      this.guarda.sexo = this.sexo
+      this.guarda.cups = this.cups
+      console.log(this.guarda)
     }
   }
 }
