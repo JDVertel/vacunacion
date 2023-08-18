@@ -1,10 +1,17 @@
 <template>
-  <p>
+  <!--   <p>
     imformacion de nombre del rango + nombre biologico +copdigo biologico dosis
     , organizado por n9mbre de rango de edad
-  </p>
+  </p> -->
   <div class="container">
-    <h6 class="display-6">Esquemas del sistema</h6>
+    <div class="row">
+      <div class="col-10">
+        <h6 class="display-6">Esquemas del sistema</h6>
+      </div>
+      <div class="col-2"> <button class="btnm" @click="mostrar(esquema)" v-if="!mostrarmodal">+ Nuevo</button></div>
+    </div>
+
+
     <div class="table-responsive">
       <table class="table">
         <thead>
@@ -19,64 +26,66 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr v-for="esquema in consultaesquemas">
             <td>
-              Recien Nacido
+              {{ esquema.Esquema }}
             </td>
-            <td>123456</td>
-            <td>Hepatitis A</td>
-            <td>si</td>
-            <td>U</td>
-            <td><button class="btnm" @click="mostrar(vacuna)" v-if="!mostrarmodal">Editar</button></td>
+            <td> {{ esquema.Cups }}</td>
+            <td> {{ esquema.Biologico }}</td>
+            <td> {{ esquema.Diluyente }}</td>
+            <td> {{ esquema.Dosis }}</td>
+            <td><button class="btnm" @click="mostrar(esquema)" v-if="!mostrarmodal">Editar</button>
+            </td>
           </tr>
 
         </tbody>
       </table>
     </div>
-    <!-- 
 
+    <modalesq :datos="uregistro" :t_title="titulot" :b_title="titulob" v-if="mostrarmodal" @rta_hijo="this.mostrarmodal = $event"/>
 
-
- -->
   </div>
 </template>
 
 <script>
+import Modalesq from "../components/Modal_esquemas.vue";
 export default {
+  components: {
+    Modalesq
+  },
   data() {
     return {
       mostrarmodal: false,
       titulot: "",
       titulob: "",
+      esquema: "",
       /*  */
-      rango: "",
-      biologico: "",
-      dosisrango: "",
+   
 
       consultaesquemas: [
         {
           id: "1",
-          Esquema: "",
-          Cups: "",
-          Biologico: "",
-          Diluyente: "",
-          Dosis: "",
+          Esquema: "Rnacido",
+          Cups: "C1234",
+          Biologico: "hepatitisB",
+          Diluyente: "no",
+          Dosis: "1",
         },
         {
           id: "3",
-          Esquema: "",
-          Cups: "",
-          Biologico: "",
-          Diluyente: "",
-          Dosis: "",
+          Esquema: "2meses",
+          Cups: "C6541",
+          Biologico: "Pfizer",
+          Diluyente: "si",
+          Dosis: "2",
         },
         {
           id: "5",
-          Esquema: "",
-          Cups: "",
-          Biologico: "",
-          Diluyente: "",
-          Dosis: "",
+          Esquema: "6meses",
+          Cups: "C96325",
+          Biologico: "Tetano",
+          Diluyente: "si",
+          Dosis: "3",
         }
       ],
       esquemas: [
@@ -87,9 +96,24 @@ export default {
     }
   },
   methods: {
-    
+    mostrar(esquema) {
+      this.mostrarmodal = !this.mostrarmodal,
+        this.uregistro = esquema;
+      console.log(this.uregistro);
+      console.log(this.mostrarmodal);
+      if (esquema) { this.titulot = "Editar", this.titulob = "Editar" }
+      else { this.titulot = "Agregar Nueva", this.titulob = "Guardar" }
+        
+    }
+
   },
 };
 </script>
 
-<style></style>
+<style>
+.btnm {
+  border-radius: 5px !important;
+  background-color: aquamarine !important;
+  border: 0px;
+}
+</style>

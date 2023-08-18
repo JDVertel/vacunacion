@@ -41,18 +41,19 @@
     </table>
   </div>
 
+  <modalvac :datos="uregistro" :t_title="titulot" :b_title="titulob" v-if="mostrarmodal" @rta_hijo="this.mostrarmodal = $event" />
+  
 
-  <modal :datos="uregistro" :t_title="titulot" :b_title="titulob" v-if="mostrarmodal" @rta_hijo="this.mostrarmodal = $event" />
-  </div>
+</div>
   <!--    -->
 </template>
 
 <script>
-import Modal from "../components/Modal_vacunas.vue";
+import Modalvac from "../components/Modal_vacunas.vue";
 
 export default {
   components: {
-    Modal
+    Modalvac
   },
   data() {
     return {
