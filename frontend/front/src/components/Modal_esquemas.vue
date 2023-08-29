@@ -9,11 +9,11 @@
 
 
       <div class="container">
-             <h4 class="display-6">{{ t_title }} Esquema </h4>
+             <h4 class="display-6">{{ t_title }}</h4>
         <div class="row">
           <div class="col-6">
             <select class="form-select form-select-sm" aria-label="Small select example" v-model="esquema">
-              <option value="">Selecciona el esquema</option>
+              <option value="">Selecciona la etapa</option>
               <option value="1">One</option>
               <option value="2">Two</option>
               <option value="3">Three</option>
