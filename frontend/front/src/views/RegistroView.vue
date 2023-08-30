@@ -5,32 +5,45 @@
 
   <br />
   <div class="row">
+    <div class="col-2">
+
+    </div>
+  </div>
+  <div class="row">
     <div class="col-10">
       <h6>Buscar un paciente</h6>
     </div>
-    <div class="col-2">
-      <button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <div class="col-2"> <button class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
         +
       </button>
     </div>
   </div>
+
   <br>
   <div class="row">
-    <div class="col-4"><select class="form-select" aria-label="Default select example">
-        <option value="0">Parametro</option>
-        <option value="1"># Documento</option>
-        <option value="3">1 Nombre</option>
-        <option value="2">1 Apellido</option>
+    <div class="col-5"><select class="form-select" aria-label="Default select example">
 
-      </select></div>
-    <div class="col-5"><input class="form-control form-control-sm" type="text" placeholder="Detalle"></div>
+        <option value="">Tipo Documento</option>
+        <option value="CCM">CC Madre</option>
+        <option value="RC">Registro Civil</option>
+        <option value="TI">Tarjeta de identidad</option>
+        <option value="CC">Cedula de Ciudadania</option>
+        <option value="CE">Cedula de Extrangeria</option>
+        <option value="PA">Pasaporte</option>
+      </select>
+    </div>
+
+    <div class="col-4">
+      <input class="form-control form-control-sm" type="text" placeholder="# Documento">
+    </div>
+
     <div class="col-2">
       <button class="btn btn-success btn-sm">
         Buscar
       </button>
     </div>
-
   </div>
+
 
   <br />
   <div class="table-responsive">
@@ -78,15 +91,15 @@
             <div class="accordion" id="accordionPanelsStayOpenExample">
 
               <div class="container">
-                edad: {{ p_edad }} / sexo: {{ p_sexo }} / gestante: {{ p_gestante }}
+                edad: {{ p_edad }} / sexo: {{ p_sexo }} / gestante: {{ p_gestante }} fnacimiento:{{ fnacimiento }}
 
                 {{ calcularEdad }}
-           
+
 
               </div>
 
               <hr>
-              <div class="accordion-item" v-if="calcularEdad.mesest > 1">
+              <div class="accordion-item" v-if="calcularEdad.dias >= 1">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#panelsStayOpen-collapse1" aria-expanded="false"
@@ -289,7 +302,7 @@
                   </div>
                 </div>
               </div>
-              <div class="accordion-item" v-if="calcularEdad.anos > 10  && p_sexo == 'f' && p_gestante == 'no'">
+              <div class="accordion-item" v-if="calcularEdad.anos > 10 && p_sexo == 'f' && p_gestante == 'no'">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#panelsStayOpen-collapse11" aria-expanded="false"
@@ -309,7 +322,7 @@
                   </div>
                 </div>
               </div>
-              <div class="accordion-item" v-if="calcularEdad.anos > 50 ">
+              <div class="accordion-item" v-if="calcularEdad.anos > 50">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#panelsStayOpen-collapse12" aria-expanded="false"
@@ -349,7 +362,7 @@
                   </div>
                 </div>
               </div>
-              <div class="accordion-item" v-if="calcularEdad.anos > 1 ">
+              <div class="accordion-item" v-if="calcularEdad.anos > 1">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#panelsStayOpen-collapse14" aria-expanded="false"
@@ -608,7 +621,7 @@ export default {
       numdoc: '',
       sexo: '',
       /* datos a cargar al momento de consultar  */
-      fnacimiento: "05/05/1981",
+      fnacimiento: "28/08/2023",
       p_sexo: "m",
       p_gestante: "no",
 
