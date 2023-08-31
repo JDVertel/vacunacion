@@ -626,7 +626,7 @@ export default {
       numdoc: '',
       sexo: '',
       /* datos a cargar al momento de consultar  */
-      fnacimiento: "20/12/1979",
+      fnacimiento: "16/02/1993",
       p_sexo: "m",
       p_gestante: "no",
 
