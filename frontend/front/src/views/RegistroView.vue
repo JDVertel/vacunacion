@@ -13,7 +13,8 @@
     <div class="col-10">
       <h6>Buscar un paciente</h6>
     </div>
-    <div class="col-2"> <button class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <div class="col-2"> <button class="btn btn-outline-success btn-sm" data-bs-toggle="modal"
+        data-bs-target="#exampleModal">
         +
       </button>
     </div>
@@ -91,15 +92,19 @@
             <div class="accordion" id="accordionPanelsStayOpenExample">
 
               <div class="container">
-                edad: {{ p_edad }} / sexo: {{ p_sexo }} / gestante: {{ p_gestante }} fnacimiento:{{ fnacimiento }}
-
+      
+                / sexo: {{ p_sexo }} 
+                / gestante: {{ p_gestante }}
+                / fnacimiento: {{ fnacimiento }} 
+           
+<hr>
                 {{ calcularEdad }}
 
 
               </div>
 
-              <hr>
-              <div class="accordion-item" v-if="calcularEdad.dias >= 1">
+              <br>
+              <div class="accordion-item" v-if="calcularEdad.diasT >= 1">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#panelsStayOpen-collapse1" aria-expanded="false"
@@ -120,7 +125,7 @@
                 </div>
               </div>
 
-              <div class="accordion-item" v-if="calcularEdad.mesest > 2">
+              <div class="accordion-item" v-if="calcularEdad.mesesT > 2">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#panelsStayOpen-collapse2" aria-expanded="false"
@@ -142,7 +147,7 @@
               </div>
 
 
-              <div class="accordion-item" v-if="calcularEdad.mesest > 4">
+              <div class="accordion-item" v-if="calcularEdad.mesesT > 4">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#panelsStayOpen-collapse3" aria-expanded="false"
@@ -162,7 +167,7 @@
                   </div>
                 </div>
               </div>
-              <div class="accordion-item" v-if="calcularEdad.mesest > 6">
+              <div class="accordion-item" v-if="calcularEdad.mesesT > 6">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#panelsStayOpen-collapse4" aria-expanded="false"
@@ -182,7 +187,7 @@
                   </div>
                 </div>
               </div>
-              <div class="accordion-item" v-if="calcularEdad.mesest > 7">
+              <div class="accordion-item" v-if="calcularEdad.mesesT > 7">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#panelsStayOpen-collapse5" aria-expanded="false"
@@ -202,7 +207,7 @@
                   </div>
                 </div>
               </div>
-              <div class="accordion-item" v-if="calcularEdad.mesest > 12">
+              <div class="accordion-item" v-if="calcularEdad.mesesT > 12">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#panelsStayOpen-collapse6" aria-expanded="false"
@@ -222,7 +227,7 @@
                   </div>
                 </div>
               </div>
-              <div class="accordion-item" v-if="calcularEdad.mesest > 18">
+              <div class="accordion-item" v-if="calcularEdad.mesesT > 18">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#panelsStayOpen-collapse7" aria-expanded="false"
@@ -242,7 +247,7 @@
                   </div>
                 </div>
               </div>
-              <div class="accordion-item" v-if="calcularEdad.mesest > 60">
+              <div class="accordion-item" v-if="calcularEdad.mesesT > 60">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#panelsStayOpen-collapse8" aria-expanded="false"
@@ -262,7 +267,7 @@
                   </div>
                 </div>
               </div>
-              <div class="accordion-item" v-if="calcularEdad.mesest > 108 && calcularEdad.mesest <= 204 && p_sexo == 'f'">
+              <div class="accordion-item" v-if="calcularEdad.mesesT > 108 && calcularEdad.mesest <= 204 && p_sexo == 'f'">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#panelsStayOpen-collapse9" aria-expanded="false"
@@ -282,7 +287,7 @@
                   </div>
                 </div>
               </div>
-              <div class="accordion-item" v-if="calcularEdad.mesest > 1 && p_sexo == 'm'">
+              <div class="accordion-item" v-if="calcularEdad.mesesT > 1 && p_sexo == 'm'">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#panelsStayOpen-collapse10" aria-expanded="false"
@@ -621,7 +626,7 @@ export default {
       numdoc: '',
       sexo: '',
       /* datos a cargar al momento de consultar  */
-      fnacimiento: "28/08/2023",
+      fnacimiento: "20/12/1979",
       p_sexo: "m",
       p_gestante: "no",
 
@@ -638,11 +643,8 @@ export default {
       var anos = Math.floor(diff / 365);
       var meses = Math.floor((diff % 365) / 30);
       var dias = diff % 30;
-      var mesest = hoy.diff(this.fnacimiento, 'months');
-
-
-
-      return { anos: anos, meses: meses, dias: dias, mesest: mesest };
+      var mesesT = hoy.diff(cumpleanos, "month");
+      return { anos: anos, meses: meses, dias: dias ,diasT: diff, mesesT: mesesT };
 
     }
   }
