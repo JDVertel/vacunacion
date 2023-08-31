@@ -10,8 +10,8 @@
 
       <div class="container">
              <h4 class="display-6">{{ t_title }}</h4>
-        <div class="row">
-          <div class="col-6">
+     
+          <div class="col">
             <select class="form-select form-select-sm" aria-label="Small select example" v-model="esquema">
               <option value="">Selecciona la etapa</option>
               <option value="1">One</option>
@@ -19,7 +19,7 @@
               <option value="3">Three</option>
             </select>
           </div>
-          <div class="col-6">
+          <div class="col">
             <select class="form-select form-select-sm" aria-label="Small select example" v-model="biologico">
               <option value="">Selecciona el biologico</option>
               <option value="1">One</option>
@@ -27,7 +27,7 @@
               <option value="3">Three</option>
             </select>
           </div>
-          <div class="col-6">
+          <div class="col">
             <select class="form-select form-select-sm" aria-label="Small select example" v-model="dosisrango">
               <option value="">Selecciona la dosis del rango</option>
               <option value="1">One</option>
@@ -35,13 +35,13 @@
               <option value="3">Three</option>
             </select>
           </div>
-          <div class="col-6">
-            <br>
-            <button class="btn_c" @click="ocultar"> Cerrar</button>
-            <button class="btn_e" @click="guardar"> {{ b_title }} </button>
+        
+    <br>
+            <button class="btn btn-outline-primary btn-sm" @click="ocultar"> Cerrar</button>
+            <button class="btn btn-outline-success btn-sm" @click="guardar"> {{ b_title }} </button>
 
-          </div>
-        </div>
+      
+       
 {{ esquema }} {{ dosisrango  }}
       </div>
     </div>

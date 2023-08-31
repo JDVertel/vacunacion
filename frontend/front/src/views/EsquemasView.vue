@@ -8,7 +8,7 @@
       <div class="col-10">
         <h6 class="display-6">Esquemas del sistema</h6>
       </div>
-      <div class="col-2"> <button class="btnm" @click="mostrar(esquema)" v-if="!mostrarmodal">+ Nuevo</button></div>
+      <div class="col-2"> <button class="btn btn-outline-primary btn-sm" @click="mostrar(esquema)" v-if="!mostrarmodal">+ Nuevo</button></div>
     </div>
 
 
@@ -34,7 +34,7 @@
             <td> {{ esquema.Biologico }}</td>
             <td> {{ esquema.Diluyente }}</td>
             <td> {{ esquema.Dosis }}</td>
-            <td><button class="btnm" @click="mostrar(esquema)" v-if="!mostrarmodal">Editar</button>
+            <td><button class="btn btn-outline-success btn-sm" @click="mostrar(esquema)" v-if="!mostrarmodal">Editar</button>
             </td>
           </tr>
 

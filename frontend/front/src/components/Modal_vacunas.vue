@@ -52,8 +52,8 @@
         </div>
       </div>
   <br>
-      <button class="btn_c" @click="ocultar"> Cerrar</button>
-      <button class="btn_e" @click="guardar"> {{ b_title }} </button>
+      <button class="btn btn-outline-primary btn-sm" @click="ocultar"> Cerrar</button>
+      <button class="btn btn-outline-success btn-sm" @click="guardar"> {{ b_title }} </button>
 
     </div>
 

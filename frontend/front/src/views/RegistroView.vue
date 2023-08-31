@@ -39,7 +39,7 @@
     </div>
 
     <div class="col-2">
-      <button class="btn btn-success btn-sm">
+      <button class="btn btn-success btn-sm" @click="buscar">
         Buscar
       </button>
     </div>
@@ -607,9 +607,9 @@
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
             Cerrar
           </button>
-          <button type="button" class="btn btn-primary">Guardar</button>
+          <button type="button" class="btn btn-primary" @click="guardar">Guardar</button>
         </div>
-        {{ tipodoc }} {{ numdoc }}
+     {{ tipodoc }} {{ numdoc }} {{ sexo }}
       </div>
     </div>
   </div>
@@ -621,6 +621,7 @@ import calculaedadVue from '../components/calculaedad.vue';
 export default {
   data() {
     return {
+      form:[],
       data: [],
       tipodoc: '',
       numdoc: '',
@@ -647,8 +648,19 @@ export default {
       return { anos: anos, meses: meses, dias: dias ,diasT: diff, mesesT: mesesT };
 
     }
-  }
+  },
+methods: {
+  guardar() {
+    console.log("metodo guardar ")
 
+
+    
+  },
+
+  buscar() {
+    console.log("metodo buscar")
+  }
+},
 
 };
 </script>

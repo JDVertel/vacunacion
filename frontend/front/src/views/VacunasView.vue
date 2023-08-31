@@ -8,7 +8,7 @@
       <h6 class="display-6">Listado de Vacunas del sistema</h6>
     </div>
     <div class="col-2">
-      <button class="btnm" @click="mostrar(vacuna)" v-if="!mostrarmodal"> + nuevo</button>
+      <button class="btn btn-outline-success btn-sm" @click="mostrar(vacuna)" v-if="!mostrarmodal"> + nuevo</button>
     </div>
   </div>
 
@@ -27,14 +27,14 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="vacuna in consultavacunas">
+        <tr v-for="(vacuna, index) in consultavacunas" :key="index">
           <td>{{ vacuna.cups }} </td>
           <td>{{ vacuna.nombre }}</td>
           <td>{{ vacuna.aplicacion }}</td>
           <td>{{ vacuna.diluyente }}</td>
           <td>{{ vacuna.jeringa }}</td>
           <td>{{ vacuna.sexo }}</td>
-          <td> <button class="btnm" @click="mostrar(vacuna)" v-if="!mostrarmodal">Editar</button>
+          <td> <button class="btn btn-outline-primary btn-sm" @click="mostrar(vacuna)" v-if="!mostrarmodal">Editar</button>
           </td>
         </tr>
       </tbody>

@@ -50,15 +50,15 @@
 
       <div class="container">
         <div class="row">
-          <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="text" placeholder="Nombre"></div>
-          <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="text" placeholder="# Nit"></div>
-          <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="text" placeholder="Ciudad"></div>
-          <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="text" placeholder="Direccion">
+          <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="text" placeholder="Nombre" v-model="nombre"></div>
+          <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="text" placeholder="# Nit" v-model="nit"></div>
+          <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="text" placeholder="Ciudad" v-model="ciudad"></div>
+          <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="text" placeholder="Direccion" v-model="direccion">
           </div>
-          <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="number" placeholder="Telefono">
+          <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="number" placeholder="Telefono"  v-model="telefono">
           </div>
-          <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="mail" placeholder="Email"></div>
-          <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="number" placeholder="# Nivel">
+          <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="mail" placeholder="Email"   v-model="email"></div>
+          <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="number" placeholder="# Nivel"   v-model="nivel">
           </div>
 
         </div>
@@ -67,13 +67,13 @@
       <h6 class="display-6">Administrador</h6>
       <div class="container">
         <div class="row">
-          <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="text" placeholder="Nombre"></div>
-          <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="text" placeholder="# Documento">
+          <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="text" placeholder="Nombre"   v-model="admin_name"></div>
+          <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="text" placeholder="# Documento"  v-model="admin_doc">
           </div>
           <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="password"
-              placeholder="Contraseña"></div>
+              placeholder="Contraseña"   v-model="pass1"></div>
           <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="password"
-              placeholder="Confirma Contraseña"></div>
+              placeholder="Confirma Contraseña"   v-model="pass2"></div>
           <div class="col-6 col-md-4">ok check</div>
         </div>
 
@@ -91,28 +91,28 @@
               <div class="col-6">
                 <div class="input-group input-group-sm mb-3">
                   <span class="input-group-text" id="addon-wrapping">1 Color</span>
-                  <input type="color" class="form-control" placeholder="Username" aria-label="Username"
+                  <input type="color" class="form-control"   v-model="color1"
                     aria-describedby="addon-wrapping">
                 </div>
               </div>
               <div class="col-6">
                 <div class="input-group input-group-sm mb-3">
                   <span class="input-group-text" id="addon-wrapping">2 Color</span>
-                  <input type="color" class="form-control" placeholder="Username" aria-label="Username"
+                  <input type="color" class="form-control"   v-model="color2"
                     aria-describedby="addon-wrapping">
                 </div>
               </div>
               <div class="col-6">
                 <div class="input-group input-group-sm mb-3">
                   <span class="input-group-text" id="addon-wrapping">3 Color</span>
-                  <input type="color" class="form-control" placeholder="Username" aria-label="Username"
+                  <input type="color" class="form-control"   v-model="color3"
                     aria-describedby="addon-wrapping">
                 </div>
               </div>
               <div class="col-6">
                 <div class="input-group input-group-sm mb-3">
                   <span class="input-group-text" id="addon-wrapping">Fondo</span>
-                  <input type="color" class="form-control" placeholder="Username" aria-label="Username"
+                  <input type="color" class="form-control"  v-model="color4"
                     aria-describedby="addon-wrapping">
                 </div>
               </div>
@@ -126,15 +126,15 @@
           </div>
           <div class="row">
             <div class="col-12">
-              <div class="input-group input-group-sm  mb-3" sm>
+              <div class="input-group input-group-sm  mb-3" sm >
                 <label class="input-group-text " for="inputGroupFile01">Cargar Logo</label>
-                <input type="file" class="form-control" id="inputGroupFile01">
+                <input type="file" class="form-control" id="inputGroupFile01"  >
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col-3">
-              <button>Guardar</button>
+              <button class="btn btn-outline-primary"  @click="guardar_paciente">Guardar</button>
             </div>
           </div>
         </div>
@@ -168,7 +168,7 @@
         <div class="collapse" id="collapseExample">
           <div class="card card-body">
 
-
+<!-- sucursales --------------------------------------------------------------------------------------------------- -->
 
             <h6 class="display-6">Datos de la nueva Sucursal</h6>
 
@@ -287,6 +287,11 @@ export default {
   data() {
     return {
       select_ent:'',
+    }
+  },
+  methods:{
+  guardar_paciente(){
+      console.log("metodo guardar")
     }
   }
 }
