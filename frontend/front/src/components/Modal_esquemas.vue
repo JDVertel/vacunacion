@@ -9,40 +9,53 @@
 
 
       <div class="container">
-             <h4 class="display-6">{{ t_title }}</h4>
-     
-          <div class="col">
-            <select class="form-select form-select-sm" aria-label="Small select example" v-model="esquema">
-              <option value="">Selecciona la etapa</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
-          </div>
-          <div class="col">
-            <select class="form-select form-select-sm" aria-label="Small select example" v-model="biologico">
-              <option value="">Selecciona el biologico</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
-          </div>
-          <div class="col">
-            <select class="form-select form-select-sm" aria-label="Small select example" v-model="dosisrango">
-              <option value="">Selecciona la dosis del rango</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
-          </div>
-        
-    <br>
-            <button class="btn btn-outline-primary btn-sm" @click="ocultar"> Cerrar</button>
-            <button class="btn btn-outline-success btn-sm" @click="guardar"> {{ b_title }} </button>
+        <h4 class="display-6">{{ t_title }}</h4>
 
-      
-       
-{{ esquema }} {{ dosisrango  }}
+        <div class="col">
+          <select class="form-select form-select-sm" aria-label="Small select example" v-model="esquema">
+            <option value="">Rango de edad</option>
+            <option value="RN">Recien Nacido</option>
+            <option value="2M">2 Meses</option>
+            <option value="4M">4 Meses</option>
+            <option value="6M">6 Meses</option>
+            <option value="7M">7 Meses</option>
+            <option value="12M">12 Meses</option>
+            <option value="18M">18 Meses</option>
+            <option value="5A">5 Años</option>
+            <option value="F9_17">Niñas de 9 a 17 Años</option>
+            <option value="M1_13">Niños 1 a 13 Años</option>
+            <option value="M10_49">Mujeres Fertil 10 a 49 Años</option>
+            <option value="50">Mayores de 50 años</option>
+            <option value="GEST">Gestantes</option>
+            <option value="1_5">Mayor a 1 hasta 5 años</option>
+          </select>
+        </div>
+        <div class="col">
+          <select class="form-select form-select-sm" aria-label="Small select example" v-model="biologico">
+            <option value="">Biologico</option>
+            <option value="1">1ra</option>
+
+          </select>
+        </div>
+        <div class="col">
+          <select class="form-select form-select-sm" aria-label="Small select example" v-model="dosisrango">
+            <option value="">Dosis en rango</option>
+            <option value="U">unica</option>
+            <option value="1">1ra</option>
+            <option value="2">2da</option>
+            <option value="3">3ra</option>
+            <option value="1R">1Refuerzo</option>
+            <option value="2R">2Refuerzo</option>
+          </select>
+        </div>
+
+        <br>
+        <button class="btn btn-outline-primary btn-sm" @click="ocultar"> Cerrar</button>
+        <button class="btn btn-outline-success btn-sm" @click="guardar"> {{ b_title }} </button>
+
+
+
+        {{ esquema }} {{ dosisrango }}
       </div>
     </div>
   </transition>
@@ -54,9 +67,9 @@ export default {
 
   data() {
     return {
-      esquema: this.datos.Esquema || "vacio",
-      biologico: this.datos.Biologico || "vacio",
-      dosisrango: this.datos.Dosis || "vacio",
+      esquema: this.datos.Esquema || "",
+      biologico: this.datos.Biologico || "",
+      dosisrango: this.datos.Dosis || "",
 
     }
   },

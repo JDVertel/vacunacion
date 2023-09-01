@@ -8,7 +8,7 @@
       <h6 class="display-6">Listado de Vacunas del sistema</h6>
     </div>
     <div class="col-2">
-      <button class="btn btn-outline-success btn-sm" @click="mostrar(vacuna)" v-if="!mostrarmodal"> + nuevo</button>
+      <button class="btn btn-outline-success btn-sm" @click="mostrar(vacuna)" v-if="!mostrarmodal">+</button>
     </div>
   </div>
 

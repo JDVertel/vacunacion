@@ -8,7 +8,7 @@
       <div class="col-10">
         <h6 class="display-6">Esquemas del sistema</h6>
       </div>
-      <div class="col-2"> <button class="btn btn-outline-primary btn-sm" @click="mostrar(esquema)" v-if="!mostrarmodal">+ Nuevo</button></div>
+      <div class="col-2"> <button class="btn btn-outline-primary btn-sm" @click="mostrar(esquema)" v-if="!mostrarmodal">+</button></div>
     </div>
 
 
