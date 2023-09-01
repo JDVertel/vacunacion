@@ -8,8 +8,8 @@
 
   <transition>
     <div class="modal2">
-      <h4 class="display-6">{{ t_title }} Vacuna </h4>
-     
+      <h6>{{ t_title }} Vacuna </h6>
+      <br>
       <div class="container">
         <div class="row">
           <div class="col-12 col-sm-4">
@@ -51,7 +51,7 @@
           </div>
         </div>
       </div>
-  <br>
+      <br>
       <button class="btn btn-outline-primary btn-sm" @click="ocultar"> Cerrar</button>
       <button class="btn btn-outline-success btn-sm" @click="guardar"> {{ b_title }} </button>
 
@@ -71,14 +71,14 @@ export default {
     return {
       estadomodal: false,
       id: this.datos.id,
-      cups: this.datos.cups  || "",
+      cups: this.datos.cups || "",
       nombre: this.datos.nombre || "",
-      aplicacion: this.datos.aplicacion  || "",
-      diluyente: this.datos.diluyente  || "",
-      jeringa: this.datos.jeringa  || "",
-      sexo: this.datos.sexo  || "",
+      aplicacion: this.datos.aplicacion || "",
+      diluyente: this.datos.diluyente || "",
+      jeringa: this.datos.jeringa || "",
+      sexo: this.datos.sexo || "",
       guarda: [],
-      crea:[]
+      crea: []
     }
   },
 
@@ -101,13 +101,13 @@ export default {
       this.guarda.sexo = this.sexo
       this.guarda.cups = this.cups
 
-      if (this.id >0) {
-      
+      if (this.id > 0) {
+
         console.log("editar registro exitosamente")
 
-             console.log(this.guarda)
+        console.log(this.guarda)
       } else {
- 
+
         console.log("registro nuevo")
         console.log(this.guarda)
       }

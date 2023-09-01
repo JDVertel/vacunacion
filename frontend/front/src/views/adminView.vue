@@ -112,13 +112,13 @@
 
 <style scoped>
 .admin{
-background-color: #D4C110;
+background-color: #ffea2c;
 }
 .user{
-background-color:#B6DEDE;
+background-color:#8ae9e9;
 }
 .super{
-background-color:#35D41D;
+background-color:#95df8a;
 }
 
 

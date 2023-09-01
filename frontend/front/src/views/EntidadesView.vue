@@ -50,15 +50,22 @@
 
       <div class="container">
         <div class="row">
-          <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="text" placeholder="Nombre" v-model="nombre"></div>
-          <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="text" placeholder="# Nit" v-model="nit"></div>
-          <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="text" placeholder="Ciudad" v-model="ciudad"></div>
-          <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="text" placeholder="Direccion" v-model="direccion">
+          <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="text" placeholder="Nombre"
+              v-model="nombre"></div>
+          <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="text" placeholder="# Nit"
+              v-model="nit"></div>
+          <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="text" placeholder="Ciudad"
+              v-model="ciudad"></div>
+          <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="text" placeholder="Direccion"
+              v-model="direccion">
           </div>
-          <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="number" placeholder="Telefono"  v-model="telefono">
+          <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="number" placeholder="Telefono"
+              v-model="telefono">
           </div>
-          <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="mail" placeholder="Email"   v-model="email"></div>
-          <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="number" placeholder="# Nivel"   v-model="nivel">
+          <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="mail" placeholder="Email"
+              v-model="email"></div>
+          <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="number" placeholder="# Nivel"
+              v-model="nivel">
           </div>
 
         </div>
@@ -67,13 +74,15 @@
       <h6 class="display-6">Administrador</h6>
       <div class="container">
         <div class="row">
-          <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="text" placeholder="Nombre"   v-model="admin_name"></div>
-          <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="text" placeholder="# Documento"  v-model="admin_doc">
+          <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="text" placeholder="Nombre"
+              v-model="admin_name"></div>
+          <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="text" placeholder="# Documento"
+              v-model="admin_doc">
           </div>
+          <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="password" placeholder="Contraseña"
+              v-model="pass1"></div>
           <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="password"
-              placeholder="Contraseña"   v-model="pass1"></div>
-          <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="password"
-              placeholder="Confirma Contraseña"   v-model="pass2"></div>
+              placeholder="Confirma Contraseña" v-model="pass2"></div>
           <div class="col-6 col-md-4">ok check</div>
         </div>
 
@@ -91,29 +100,25 @@
               <div class="col-6">
                 <div class="input-group input-group-sm mb-3">
                   <span class="input-group-text" id="addon-wrapping">1 Color</span>
-                  <input type="color" class="form-control"   v-model="color1"
-                    aria-describedby="addon-wrapping">
+                  <input type="color" class="form-control" v-model="color1" aria-describedby="addon-wrapping">
                 </div>
               </div>
               <div class="col-6">
                 <div class="input-group input-group-sm mb-3">
                   <span class="input-group-text" id="addon-wrapping">2 Color</span>
-                  <input type="color" class="form-control"   v-model="color2"
-                    aria-describedby="addon-wrapping">
+                  <input type="color" class="form-control" v-model="color2" aria-describedby="addon-wrapping">
                 </div>
               </div>
               <div class="col-6">
                 <div class="input-group input-group-sm mb-3">
                   <span class="input-group-text" id="addon-wrapping">3 Color</span>
-                  <input type="color" class="form-control"   v-model="color3"
-                    aria-describedby="addon-wrapping">
+                  <input type="color" class="form-control" v-model="color3" aria-describedby="addon-wrapping">
                 </div>
               </div>
               <div class="col-6">
                 <div class="input-group input-group-sm mb-3">
                   <span class="input-group-text" id="addon-wrapping">Fondo</span>
-                  <input type="color" class="form-control"  v-model="color4"
-                    aria-describedby="addon-wrapping">
+                  <input type="color" class="form-control" v-model="color4" aria-describedby="addon-wrapping">
                 </div>
               </div>
 
@@ -126,15 +131,15 @@
           </div>
           <div class="row">
             <div class="col-12">
-              <div class="input-group input-group-sm  mb-3" sm >
+              <div class="input-group input-group-sm  mb-3" sm>
                 <label class="input-group-text " for="inputGroupFile01">Cargar Logo</label>
-                <input type="file" class="form-control" id="inputGroupFile01"  >
+                <input type="file" class="form-control" id="inputGroupFile01">
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col-3">
-              <button class="btn btn-outline-primary"  @click="guardar_paciente">Guardar</button>
+              <button class="btn btn-outline-primary" @click="guardar_paciente">Guardar</button>
             </div>
           </div>
         </div>
@@ -144,135 +149,134 @@
 
     <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
       <br>
+
+
+
       <select class="form-select form-select-sm" aria-label="Default select example" v-model="select_ent">
-        <option selected value="0">Seleccione la Entidad</option>
+        <option selected value="0">Seleccione la Entidad </option>
         <option value="1">Esebarranca</option>
         <option value="2">Clinica san jose</option>
         <option value="3">Clinica comuneros</option>
       </select>
+
       <div class="container">
-
-
-
         <br>
+        <div class="container" v-if="select_ent > 0">
+          <p class="d-inline-flex gap-1">
+            <button class="btn btn-outline-success btn-sm" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+              +Nueva
+            </button>
+          </p>
+          <div class="collapse" id="collapseExample">
+            <div class="card card-body">
 
-        <p class="d-inline-flex gap-1">
+              <!-- sucursales --------------------------------------------------------------------------------------------------- -->
 
-          <button class="btn btn-outline-success btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
-            aria-expanded="false" aria-controls="collapseExample" v-if="select_ent > 0">
-            +Nueva
-          </button>
+              <h6 class="display-6">Datos de la nueva Sucursal</h6>
+
+              <div class="container">
+                <div class="row">
+                  <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="text"
+                      placeholder="Nombre sucursal" v-model="s_nombre">
+                  </div>
+
+                  <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="text" placeholder="Ciudad"
+                      v-model="s_ciudad">
+                  </div>
+                  <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="text"
+                      placeholder="Direccion" v-model="s_direccion">
+                  </div>
+                  <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="number"
+                      placeholder="Telefono" v-model="s_telefono">
+                  </div>
+                  <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="mail" placeholder="Email"
+                      v-model="s_email">
+                  </div>
 
 
-        </p>
-        <div class="collapse" id="collapseExample">
-          <div class="card card-body">
-
-<!-- sucursales --------------------------------------------------------------------------------------------------- -->
-
-            <h6 class="display-6">Datos de la nueva Sucursal</h6>
-
-            <div class="container">
-              <div class="row">
-                <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="text"
-                    placeholder="Nombre sucursal">
                 </div>
 
-                <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="text" placeholder="Ciudad">
-                </div>
-                <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="text"
-                    placeholder="Direccion">
-                </div>
-                <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="number"
-                    placeholder="Telefono">
-                </div>
-                <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="mail" placeholder="Email">
-                </div>
-                <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="mail" placeholder="Email">
-                </div>
+                <br>
+                <h6>Supervisor</h6>
 
-              </div>
-
-              <br>
-              <h6>Supervisor</h6>
-
-              <div class="row">
-                <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="text" placeholder="Nombre">
+                <div class="row">
+                  <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="text"
+                      placeholder="Nombre">
+                  </div>
+                  <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="text"
+                      placeholder="# Documento">
+                  </div>
+                  <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="password"
+                      placeholder="Contraseña"></div>
+                  <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="password"
+                      placeholder="Confirma Contraseña"></div>
+                  <div class="col-6 col-md-4">ok check</div>
                 </div>
-                <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="text"
-                    placeholder="# Documento">
-                </div>
-                <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="password"
-                    placeholder="Contraseña"></div>
-                <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="password"
-                    placeholder="Confirma Contraseña"></div>
-                <div class="col-6 col-md-4">ok check</div>
-              </div>
-              <br>
-              <div class="row">
-                <div class="col"> <button type="button" class="btn btn-outline-primary">Guardar</button></div>
+                <br>
+                <div class="row">
+                  <div class="col"> <button type="button" class="btn btn-outline-primary"
+                      @click="guardar_sucursal">Guardar</button></div>
 
+                </div>
               </div>
             </div>
 
+          </div>
 
+          <div class="container">
+            <hr>
+
+            <h6>Sucursales del la Entidad</h6>
+            <table class="table table-sm">
+              <thead>
+                <tr>
+                  <th scope="col">id</th>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Ciudad</th>
+                  <th scope="col">Direccion</th>
+                  <th>Estado</th>
+                  <th>Opc</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                  <td>@mdo</td>
+                  <td><button type="button" class="btn btn-outline-primary btn-sm">o
+                    </button></td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                  <td>@mdo</td>
+                  <td><button type="button" class="btn btn-outline-primary btn-sm">o
+                    </button></td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td colspan="2">Larry the Bird</td>
+                  <td>@twitter</td>
+                  <td>@mdo</td>
+                  <td><button type="button" class="btn btn-outline-primary btn-sm">o
+                    </button></td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
+
+
+        {{ sucursal }}
+
+
+
       </div>
-
-
-
-
-      <br>
-
-      <hr>
-      <div class="container">
-
-
-        <h6>Sucursales del la Entidad</h6>
-        <table class="table table-sm">
-          <thead>
-            <tr>
-              <th scope="col">id</th>
-              <th scope="col">Nombre</th>
-              <th scope="col">Ciudad</th>
-              <th scope="col">Direccion</th>
-              <th>Estado</th>
-              <th>Opc</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-               <td>@mdo</td>
-               <td><button type="button" class="btn btn-outline-primary btn-sm">o
-               </button></td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-               <td>@mdo</td>
-                   <td><button type="button" class="btn btn-outline-primary btn-sm">o
-                 </button></td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td colspan="2">Larry the Bird</td>
-              <td>@twitter</td>
-               <td>@mdo</td>
-                   <td><button type="button" class="btn btn-outline-primary btn-sm">o
-                 </button></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-
 
 
     </div>
@@ -286,15 +290,60 @@ export default {
 
   data() {
     return {
-      select_ent:'',
+            select_ent: '0',
+      /* ---------- */
+      entidad: [],
+      nombre: '',
+      ciudad: '',
+      direccion: '',
+      telefono: '',
+      email: '',
+      nivel: '',
+      admin_name: '',
+      admin_doc: '',
+      pass1: '',
+      pass2: '',
+      /* ------------ */
+      sucursal: [],
     }
   },
-  methods:{
-  guardar_paciente(){
+
+
+  methods: {
+
+
+    guardar_paciente() {
       console.log("metodo guardar")
+      //crear un array con todoss los elementos
+
+    },
+
+    guardar_entidad() {
+      this.entidad.push({
+        nombre: this.nombre,
+        ciudad: this.ciudad,
+        direccion: this.direccion,
+        telefono: this.telefono,
+        email: this.email,
+        nivel: this.nivel
+      });
+    },
+
+
+
+    guardar_sucursal() {
+
+      console.log("aceptado"),
+        this.sucursal.push({
+          s_nombre: this.s_nombre,
+        })
+
+
     }
   }
+
 }
+
 </script>
 
 <style></style>
