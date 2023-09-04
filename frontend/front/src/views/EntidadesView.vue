@@ -28,10 +28,10 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th>829001846-6</th>
-            <td>Ese Barrancabermeja</td>
-            <td>Activa</td>
+          <tr v-for="(entidad, index) in BDentidades" :key="index">
+            <th>{{ entidad.nit }}</th>
+            <td>{{ entidad.nombre }}</td>
+            <td>{{ entidad.estado }}</td>
             <td><button type="button" class="btn btn-warning btn-sm">x</button><button type="button"
                 class="btn btn-danger btn-sm">Bloq</button></td>
           </tr>
@@ -202,21 +202,19 @@
 
                 <div class="row">
                   <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="text"
-                      placeholder="Nombre">
+                      placeholder="Usuario" v-model="s_user">
                   </div>
-                  <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="text"
-                      placeholder="# Documento">
-                  </div>
+
                   <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="password"
-                      placeholder="Contraseña"></div>
+                      placeholder="Contraseña" v-model="pass1"></div>
                   <div class="col-6 col-md-4"><input class="form-control form-control-sm" type="password"
-                      placeholder="Confirma Contraseña"></div>
-                  <div class="col-6 col-md-4">ok check</div>
+                      placeholder="Confirma Contraseña" v-model="pass2"></div>
+                  <div class="col-6 col-md-4"></div>
                 </div>
                 <br>
                 <div class="row">
-                  <div class="col"> <button type="button" class="btn btn-outline-primary"
-                      @click="guardar_sucursal">Guardar</button></div>
+                  <div class="col"> <button type="button" class="btn btn-outline-primary" @click="guardar_sucursal"
+                      v-if="pass1 === pass2 && pass1 != ''">Guardar</button></div>
 
                 </div>
               </div>
@@ -241,7 +239,7 @@
               </thead>
               <tbody>
                 <tr>
-                  <th scope="row">1</th>
+                  <th>1</th>
                   <td>Mark</td>
                   <td>Otto</td>
                   <td>@mdo</td>
@@ -250,7 +248,7 @@
                     </button></td>
                 </tr>
                 <tr>
-                  <th scope="row">2</th>
+                  <th>2</th>
                   <td>Jacob</td>
                   <td>Thornton</td>
                   <td>@fat</td>
@@ -259,7 +257,7 @@
                     </button></td>
                 </tr>
                 <tr>
-                  <th scope="row">3</th>
+                  <th>3</th>
                   <td colspan="2">Larry the Bird</td>
                   <td>@twitter</td>
                   <td>@mdo</td>
@@ -290,7 +288,7 @@ export default {
 
   data() {
     return {
-            select_ent: '0',
+      select_ent: '0',
       /* ---------- */
       entidad: [],
       nombre: '',
@@ -305,6 +303,31 @@ export default {
       pass2: '',
       /* ------------ */
       sucursal: [],
+
+
+
+      /* -----------------------BD */
+      BDentidades: [
+        {
+          nit: '123456',
+          nombre: 'cajasan',
+          estado: 'activo'
+
+        },
+        {
+          nit: '654321',
+          nombre: 'esebarranca',
+          estado: 'activo'
+
+        },
+        {
+          nit: '19854',
+          nombre: 'clinica san jose',
+          estado: 'inactivo'
+
+        }
+      ]
+
     }
   },
 
@@ -333,9 +356,19 @@ export default {
 
     guardar_sucursal() {
 
-      console.log("aceptado"),
+      console.log("guardando sucursal"),
         this.sucursal.push({
+          id_entidad: this.select_ent,
           s_nombre: this.s_nombre,
+          s_ciudad: this.s_ciudad,
+          s_direccion: this.s_direccion,
+          s_telefono: this.s_telefono,
+          s_email: this.s_email,
+          /* -------------------credenciales */
+          s_user: this.s_user,
+          s_pass: this.pass2,
+
+
         })
 
 

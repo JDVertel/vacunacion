@@ -14,9 +14,9 @@
 
   <br />
   <div class="table-responsive">
-    <table class="table table-sm table-bordered">
+    <table class="table table-sm ">
       <thead>
-        <tr class="table-primary">
+        <tr>
           <th>CUPS</th>
           <th>Nombre</th>
           <th>Aplicacion</th>
@@ -61,6 +61,7 @@ export default {
       titulot: "",
       titulob:"",
       mostrarmodal: false,
+      /* ----------------------------------BD */
       consultavacunas: [
         {
           id: 1,
@@ -81,6 +82,7 @@ export default {
           nombre: "pfizer"
         }
       ],
+      /* -------------------------------------- */
       uregistro: []
     }
   },

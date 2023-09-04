@@ -21,9 +21,10 @@
   </div>
 
   <br>
+  <h6 class="text-center">    Ingrese los datos del paciente a consultar </h6>
   <div class="row">
-    <div class="col-5"><select class="form-select" aria-label="Default select example">
-
+    <div class="col-5">
+      <select class="form-select" aria-label="Default select example" v-model="tipodoc">
         <option value="">Tipo Documento</option>
         <option value="CCM">CC Madre</option>
         <option value="RC">Registro Civil</option>
@@ -35,11 +36,13 @@
     </div>
 
     <div class="col-4">
-      <input class="form-control form-control-sm" type="text" placeholder="# Documento">
+      
+      <input class="form-control form-control-sm" type="text" placeholder="# Documento" v-model="numdoc">
     </div>
 
+
     <div class="col-2">
-      <button class="btn btn-success btn-sm" @click="buscar">
+      <button class="btn btn-success btn-sm" @click="buscar" v-if="tipodoc !='' && numdoc !='' ">
         Buscar
       </button>
     </div>
@@ -92,12 +95,12 @@
             <div class="accordion" id="accordionPanelsStayOpenExample">
 
               <div class="container">
-      
-                / sexo: {{ p_sexo }} 
+
+                / sexo: {{ p_sexo }}
                 / gestante: {{ p_gestante }}
-                / fnacimiento: {{ fnacimiento }} 
-           
-<hr>
+                / fnacimiento: {{ fnacimiento }}
+
+                <hr>
                 {{ calcularEdad }}
 
 
@@ -609,7 +612,7 @@
           </button>
           <button type="button" class="btn btn-primary" @click="guardar">Guardar</button>
         </div>
-     {{ tipodoc }} {{ numdoc }} {{ sexo }}
+        {{ tipodoc }} {{ numdoc }} {{ sexo }}
       </div>
     </div>
   </div>
@@ -621,16 +624,19 @@ import calculaedadVue from '../components/calculaedad.vue';
 export default {
   data() {
     return {
-      form:[],
+      form: [],
       data: [],
       tipodoc: '',
       numdoc: '',
       sexo: '',
       /* datos a cargar al momento de consultar  */
+
+
+
       fnacimiento: "16/02/1993",
       p_sexo: "m",
       p_gestante: "no",
-
+      busqueda: [],
     }
   },
 
@@ -645,22 +651,27 @@ export default {
       var meses = Math.floor((diff % 365) / 30);
       var dias = diff % 30;
       var mesesT = hoy.diff(cumpleanos, "month");
-      return { anos: anos, meses: meses, dias: dias ,diasT: diff, mesesT: mesesT };
+      return { anos: anos, meses: meses, dias: dias, diasT: diff, mesesT: mesesT };
 
     }
   },
-methods: {
-  guardar() {
-    console.log("metodo guardar ")
+  methods: {
+    guardar() {
+      console.log("metodo guardar ")
 
 
-    
+
+    },
+
+    buscar() {
+      console.log("metodo buscar paciente")
+   /*    this.busqueda.push({
+        tipodoc: this.tipodoc,
+        numdoc: this.numdoc
+      }) */
+  console.log(this.tipodoc , this.numdoc)
+    }
   },
-
-  buscar() {
-    console.log("metodo buscar")
-  }
-},
 
 };
 </script>
