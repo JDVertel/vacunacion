@@ -1,5 +1,10 @@
 <template>
-  <h1>about page</h1>
+<img src="./../../src/img/sena.png" alt="" width="180" height="125">
+<h1 class="text-center
+">Vacuna Online Version 1.0</h1>
+  
+  <h5 class="text-center">Prototipo desarrollado con el apoyo de la linea de tecnologias virtuales - Tecnoparque Nodo Socorro</h5>
+  <p>Todos los derechos Reservados</p>
 </template>
 
 <script>
