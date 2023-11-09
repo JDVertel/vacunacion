@@ -1,5 +1,14 @@
 <template>
   <h1>administracion</h1>
+
+  crear neveras con parametros 
+  nombre 
+  identificador 
+  voltajes 
+  tamaño litros
+  temp max y temp min
+   
+
 </template>
 
 <script>

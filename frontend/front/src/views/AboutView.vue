@@ -3,7 +3,7 @@
 <h1 class="text-center
 ">Vacuna Online Version 1.0</h1>
   
-  <h5 class="text-center">Prototipo desarrollado con el apoyo de la linea de tecnologias virtuales - Tecnoparque Nodo Socorro</h5>
+  <h5 class="text-center">Prototipo desarrollado con el apoyo de la linea de tecnologias virtuales - Tecnoparque Nodo Socorro 2023</h5>
   <p>Todos los derechos Reservados</p>
 </template>
 
