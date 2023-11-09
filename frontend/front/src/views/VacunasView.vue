@@ -17,13 +17,13 @@
     <table class="table table-sm ">
       <thead>
         <tr>
-          <th>CUPS</th>
-          <th>Nombre</th>
-          <th>Aplicacion</th>
-          <th>Diluyente</th>
-          <th>Calibre</th>
-          <th>Sexo</th>
-          <th>Opc</th>
+          <th><strong>CUPS</strong></th>
+          <th><strong>NOMBRE</strong></th>
+          <th><strong>APLICACION</strong></th>
+          <th><strong>DILUYENTE</strong></th>
+          <th><strong>CALIBRE</strong></th>
+          <th><strong>SEXO</strong></th>
+          <th><strong>OPC</strong></th>
         </tr>
       </thead>
       <tbody>

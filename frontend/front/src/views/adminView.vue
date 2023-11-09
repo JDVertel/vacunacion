@@ -1,140 +1,190 @@
 <template>
-  <div class="container">
+<div class="container">
     <dir class="row">
-      <div class="col-6"><img src="../img/logo.png" alt="" class="logo" /></div>
+        <div class="col-6"><img src="../img/logo.png" alt="" class="logo" /></div>
     </dir>
     <div>
-      <h6 class="display-6 text-center">Dashboard</h6>
+        <h6 class="display-6 text-center">Dashboard</h6>
     </div>
     <br>
 
     <div class="row">
-      <div class="col-6 col-md-4">
-        <div class="card super" >
-          <v-icon name="bi-truck" class="card-img-top iconos" />
-          <div class="card-body">
-            <p class="card-text">
-              <RouterLink to="/vacunas">++Vacunas</RouterLink>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-6 col-md-4">
-        <div class="card super" >
-          <v-icon name="la-product-hunt" class="card-img-top iconos" />
-          <div class="card-body">
-            <p class="card-text">
-              <RouterLink to="/esquemas">++Esquemas</RouterLink>
-            </p>
-          </div>
-        </div>
-      </div>
-            <div class="col-6 col-md-4">
-          <div class="card super">
-            <v-icon name="md-output-outlined" class="card-img-top iconos" />
-            <div class="card-body">
-              <p class="card-text">
-                <RouterLink to="/entidades">++Entidades </RouterLink>
-              </p>
-            </div>
-          </div>
+        <div class="col-6 col-md-4">
+            <RouterLink to="/vacunas">
+                <div class="card super">
+                    <div class="icons"> <svg xmlns="http://www.w3.org/2000/svg" height="4em" viewBox="0 0 512 512">
+                            <path d="M441 7l32 32 32 32c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-15-15L417.9 128l55 55c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-72-72L295 73c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l55 55L422.1 56 407 41c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0zM210.3 155.7l61.1-61.1c.3 .3 .6 .7 1 1l16 16 56 56 56 56 16 16c.3 .3 .6 .6 1 1l-191 191c-10.5 10.5-24.7 16.4-39.6 16.4H97.9L41 505c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l57-57V325.3c0-14.9 5.9-29.1 16.4-39.6l43.3-43.3 57 57c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6l-57-57 41.4-41.4 57 57c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6l-57-57z" /></svg>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            ++Vacunas
+                        </p>
+                    </div>
+                </div>
+            </RouterLink>
         </div>
 
-      <div class="col-6 col-md-4">
-        <div class="card user" >
-          <v-icon name="ri-customer-service-2-line" class="card-img-top iconos" />
-          <div class="card-body">
-            <p class="card-text">
-              <RouterLink to="/registro">Registro</RouterLink>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-6 col-md-4">
-        <div class="card user" >
-          <v-icon name="hi-solid-users" class="card-img-top iconos" />
-          <div class="card-body">
-            <p class="card-text">
-              <RouterLink to="/aplicaciones">Aplicaciones</RouterLink>
-            </p>
-          </div>
-        </div>
-      </div>
-
-    <div class="col-6 col-md-4">
-          <div class="card user" >
-            <v-icon name="md-bordercolor-outlined" class="card-img-top iconos" />
-            <div class="card-body">
-              <p class="card-text">
-                <RouterLink to="/informes">Informes</RouterLink>
-              </p>
-            </div>
-          </div>
-        </div>
   
-            <div class="col-6 col-md-4">
-          <div class="card admin" >
-            <v-icon name="si-materialdesignicons" class="card-img-top iconos" />
-            <div class="card-body">
-              <p class="card-text">
-                <RouterLink to="/neveras">+Neveras</RouterLink>
-              </p>
-            </div>
-          </div>
+
+        <div class="col-6 col-md-4">
+            <RouterLink to="/esquemas">
+                <div class="card super">
+                    <div class="icons"> <svg xmlns="http://www.w3.org/2000/svg" height="4em" viewBox="0 0 448 512">
+                            <path d="M224 0a80 80 0 1 1 0 160A80 80 0 1 1 224 0zM436.8 382.8L373.5 462c-16.6 20.7-46.8 24.1-67.5 7.5c-17.6-14.1-22.7-38.1-13.5-57.7l-.8-.1c-38.9-5.6-74.3-25.1-99.7-54.8V320c0-17.7-14.3-32-32-32s-32 14.3-32 32v48c0 .8 0 1.6 .1 2.4l101.4 50.7c23.7 11.9 33.3 40.7 21.5 64.4s-40.7 33.3-64.4 21.5L27.2 427.3c-1.1-.5-2.2-1.1-3.3-1.7c-4.9-2.8-9.2-6.4-12.6-10.6c-4.6-5.4-7.8-11.7-9.6-18.4c-3.3-12-1.9-25.2 4.8-36.6c.6-1.1 1.3-2.2 2-3.2L75.6 256.1c26.7-40.1 71.7-64.1 119.8-64.1h75.2c46.5 0 90.1 22.5 117.2 60.3l50.7 70.9c2.2 3 4 6.1 5.5 9.4c2.9 6.7 4.3 13.8 4 20.8c-.3 10.6-4.2 21-11.2 29.4zM320 332a44 44 0 1 0 -88 0 44 44 0 1 0 88 0z" /></svg>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            ++Esquemas
+                        </p>
+                    </div>
+                </div>
+            </RouterLink>
         </div>
-      <div class="col-6 col-md-4">
-          <div class="card admin" >
-            <v-icon name="hi-document-report" class="card-img-top iconos" />
-            <div class="card-body">
-              <p class="card-text">
-                <RouterLink to="/usuarios">+Usuarios</RouterLink>
-              </p>
-            </div>
-          </div>
+        <div class="col-6 col-md-4">
+            <RouterLink to="/entidades">
+                <div class="card super">
+                    <div class="icons"> <svg xmlns="http://www.w3.org/2000/svg" height="4em" viewBox="0 0 640 512">
+                            <path d="M192 48c0-26.5 21.5-48 48-48H400c26.5 0 48 21.5 48 48V512H368V432c0-26.5-21.5-48-48-48s-48 21.5-48 48v80H192V48zM48 96H160V512H48c-26.5 0-48-21.5-48-48V320H80c8.8 0 16-7.2 16-16s-7.2-16-16-16H0V224H80c8.8 0 16-7.2 16-16s-7.2-16-16-16H0V144c0-26.5 21.5-48 48-48zm544 0c26.5 0 48 21.5 48 48v48H560c-8.8 0-16 7.2-16 16s7.2 16 16 16h80v64H560c-8.8 0-16 7.2-16 16s7.2 16 16 16h80V464c0 26.5-21.5 48-48 48H480V96H592zM312 64c-8.8 0-16 7.2-16 16v24H272c-8.8 0-16 7.2-16 16v16c0 8.8 7.2 16 16 16h24v24c0 8.8 7.2 16 16 16h16c8.8 0 16-7.2 16-16V152h24c8.8 0 16-7.2 16-16V120c0-8.8-7.2-16-16-16H344V80c0-8.8-7.2-16-16-16H312z" /></svg>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            ++Entidades
+                        </p>
+                    </div>
+                </div>
+            </RouterLink>
         </div>
-    
-      <div class="col-6 col-md-4">
-        <div class="card admin" >
-          <v-icon name="md-shoppingcart-outlined" class="card-img-top iconos" />
-          <div class="card-body">
-            <p class="card-text">
-              <RouterLink to="/administracion">+Admin</RouterLink>
-            </p>
-          </div>
+
+        <div class="col-6 col-md-4">
+            <RouterLink to="/registro">
+                <div class="card user">
+                    <div class="icons"> <svg xmlns="http://www.w3.org/2000/svg" height="4em" viewBox="0 0 640 512"><path d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM504 312V248H440c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V136c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H552v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg> </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            Pacientes
+                        </p>
+                    </div>
+                </div>
+            </RouterLink>
         </div>
-      </div>
+        <div class="col-6 col-md-4">
+            <RouterLink to="/aplicaciones">
+                <div class="card user">
+                    <div class="icons"> <svg xmlns="http://www.w3.org/2000/svg" height="4em" viewBox="0 0 576 512">
+                            <path d="M224 24V80H168c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24h56v56c0 13.3 10.7 24 24 24h48c13.3 0 24-10.7 24-24V176h56c13.3 0 24-10.7 24-24V104c0-13.3-10.7-24-24-24H320V24c0-13.3-10.7-24-24-24H248c-13.3 0-24 10.7-24 24zM559.7 392.2c17.8-13.1 21.6-38.1 8.5-55.9s-38.1-21.6-55.9-8.5L392.6 416H272c-8.8 0-16-7.2-16-16s7.2-16 16-16h16 64c17.7 0 32-14.3 32-32s-14.3-32-32-32H288 272 193.7c-29.1 0-57.3 9.9-80 28L68.8 384H32c-17.7 0-32 14.3-32 32v64c0 17.7 14.3 32 32 32H192 352.5c29 0 57.3-9.3 80.7-26.5l126.6-93.3zm-367-8.2l.9 0 0 0c-.3 0-.6 0-.9 0z" /></svg>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            Aplicaciones
+                        </p>
+                    </div>
+                </div>
+            </RouterLink>
+        </div>
+
+        <div class="col-6 col-md-4">
+            <RouterLink to="/informes">
+                <div class="card user">
+                    <div class="icons"> <svg xmlns="http://www.w3.org/2000/svg" height="4em" viewBox="0 0 512 512">
+                            <path d="M96 352V96c0-35.3 28.7-64 64-64H416c35.3 0 64 28.7 64 64V293.5c0 17-6.7 33.3-18.7 45.3l-58.5 58.5c-12 12-28.3 18.7-45.3 18.7H160c-35.3 0-64-28.7-64-64zM272 128c-8.8 0-16 7.2-16 16v48H208c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h48v48c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V256h48c8.8 0 16-7.2 16-16V208c0-8.8-7.2-16-16-16H320V144c0-8.8-7.2-16-16-16H272zm24 336c13.3 0 24 10.7 24 24s-10.7 24-24 24H136C60.9 512 0 451.1 0 376V152c0-13.3 10.7-24 24-24s24 10.7 24 24l0 224c0 48.6 39.4 88 88 88H296z" /></svg>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            Informes
+                        </p>
+                    </div>
+                </div>
+            </RouterLink>
+        </div>
+
+        <div class="col-6 col-md-4"><RouterLink to="/neveras">
+            <div class="card admin">
+                <div class="icons"> <svg xmlns="http://www.w3.org/2000/svg" height="4em" viewBox="0 0 512 512">
+                        <path d="M448 96a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zM320 96a96 96 0 1 1 192 0A96 96 0 1 1 320 96zM144 64c-26.5 0-48 21.5-48 48V276.5c0 17.3-7.1 31.9-15.3 42.5C70.2 332.6 64 349.5 64 368c0 44.2 35.8 80 80 80s80-35.8 80-80c0-18.5-6.2-35.4-16.7-48.9c-8.2-10.6-15.3-25.2-15.3-42.5V112c0-26.5-21.5-48-48-48zM32 112C32 50.2 82.1 0 144 0s112 50.1 112 112V276.5c0 .1 .1 .3 .2 .6c.2 .6 .8 1.6 1.7 2.8c18.9 24.4 30.1 55 30.1 88.1c0 79.5-64.5 144-144 144S0 447.5 0 368c0-33.2 11.2-63.8 30.1-88.1c.9-1.2 1.5-2.2 1.7-2.8c.1-.3 .2-.5 .2-.6V112zM192 368c0 26.5-21.5 48-48 48s-48-21.5-48-48c0-20.9 13.4-38.7 32-45.3V272c0-8.8 7.2-16 16-16s16 7.2 16 16v50.7c18.6 6.6 32 24.4 32 45.3z" /></svg>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">
+                        +Neveras
+                    </p>
+                </div>
+            </div></RouterLink>
+        </div>
+        <div class="col-6 col-md-4">
+            <RouterLink to="/usuarios">
+                <div class="card admin">
+                    <div class="icons"> <svg xmlns="http://www.w3.org/2000/svg" height="4em" viewBox="0 0 640 512">
+                            <path d="M144 0a80 80 0 1 1 0 160A80 80 0 1 1 144 0zM512 0a80 80 0 1 1 0 160A80 80 0 1 1 512 0zM0 298.7C0 239.8 47.8 192 106.7 192h42.7c15.9 0 31 3.5 44.6 9.7c-1.3 7.2-1.9 14.7-1.9 22.3c0 38.2 16.8 72.5 43.3 96c-.2 0-.4 0-.7 0H21.3C9.6 320 0 310.4 0 298.7zM405.3 320c-.2 0-.4 0-.7 0c26.6-23.5 43.3-57.8 43.3-96c0-7.6-.7-15-1.9-22.3c13.6-6.3 28.7-9.7 44.6-9.7h42.7C592.2 192 640 239.8 640 298.7c0 11.8-9.6 21.3-21.3 21.3H405.3zM224 224a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zM128 485.3C128 411.7 187.7 352 261.3 352H378.7C452.3 352 512 411.7 512 485.3c0 14.7-11.9 26.7-26.7 26.7H154.7c-14.7 0-26.7-11.9-26.7-26.7z" /></svg>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            +Usuarios
+                        </p>
+                    </div>
+                </div>
+            </RouterLink>
+        </div>
+
+        <div class="col-6 col-md-4">
+            <RouterLink to="/administracion">
+                <div class="card admin">
+                    <div class="icons"> <svg xmlns="http://www.w3.org/2000/svg" height="4em" viewBox="0 0 640 512">
+                            <path d="M224 0a128 128 0 1 1 0 256A128 128 0 1 1 224 0zM178.3 304h91.4c11.8 0 23.4 1.2 34.5 3.3c-2.1 18.5 7.4 35.6 21.8 44.8c-16.6 10.6-26.7 31.6-20 53.3c4 12.9 9.4 25.5 16.4 37.6s15.2 23.1 24.4 33c15.7 16.9 39.6 18.4 57.2 8.7v.9c0 9.2 2.7 18.5 7.9 26.3H29.7C13.3 512 0 498.7 0 482.3C0 383.8 79.8 304 178.3 304zM436 218.2c0-7 4.5-13.3 11.3-14.8c10.5-2.4 21.5-3.7 32.7-3.7s22.2 1.3 32.7 3.7c6.8 1.5 11.3 7.8 11.3 14.8v30.6c7.9 3.4 15.4 7.7 22.3 12.8l24.9-14.3c6.1-3.5 13.7-2.7 18.5 2.4c7.6 8.1 14.3 17.2 20.1 27.2s10.3 20.4 13.5 31c2.1 6.7-1.1 13.7-7.2 17.2l-25 14.4c.4 4 .7 8.1 .7 12.3s-.2 8.2-.7 12.3l25 14.4c6.1 3.5 9.2 10.5 7.2 17.2c-3.3 10.6-7.8 21-13.5 31s-12.5 19.1-20.1 27.2c-4.8 5.1-12.5 5.9-18.5 2.4l-24.9-14.3c-6.9 5.1-14.3 9.4-22.3 12.8l0 30.6c0 7-4.5 13.3-11.3 14.8c-10.5 2.4-21.5 3.7-32.7 3.7s-22.2-1.3-32.7-3.7c-6.8-1.5-11.3-7.8-11.3-14.8V454.8c-8-3.4-15.6-7.7-22.5-12.9l-24.7 14.3c-6.1 3.5-13.7 2.7-18.5-2.4c-7.6-8.1-14.3-17.2-20.1-27.2s-10.3-20.4-13.5-31c-2.1-6.7 1.1-13.7 7.2-17.2l24.8-14.3c-.4-4.1-.7-8.2-.7-12.4s.2-8.3 .7-12.4L343.8 325c-6.1-3.5-9.2-10.5-7.2-17.2c3.3-10.6 7.7-21 13.5-31s12.5-19.1 20.1-27.2c4.8-5.1 12.4-5.9 18.5-2.4l24.8 14.3c6.9-5.1 14.5-9.4 22.5-12.9V218.2zm92.1 133.5a48.1 48.1 0 1 0 -96.1 0 48.1 48.1 0 1 0 96.1 0z" /></svg>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            +Admin
+                        </p>
+                    </div>
+                </div>
+            </RouterLink>
+        </div>
 
     </div>
-  </div>
+</div>
 </template>
 
 <script></script>
 
 <style scoped>
-.admin{
-background-color: #ffea2c;
-}
-.user{
-background-color:#8ae9e9;
-}
-.super{
-background-color:#95df8a;
+.admin {
+    background-color: #ffea2c;
 }
 
+.user {
+    background-color: #8ae9e9;
+}
 
-
+.super {
+    background-color: #95df8a;
+}
 
 .card {
-  margin: 2px !important;
+    margin: 2px !important;
 }
 
 .iconos {
-  margin-top: 20px;
-  scale: 2.5;
+    margin-top: 20px;
+    scale: 2.5;
 
 }
 
 .card-body {
-  text-align: center !important;
+    text-align: center !important;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+svg.path {
+    text-shadow: 2px 2px 5px #000;
+    color: azure;
+}
+
+.icons {
+    text-align: center;
+    padding-top: 1.5em;
+
 }
 </style>

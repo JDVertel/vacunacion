@@ -54,7 +54,7 @@
     <table class="table table-sm ">
       <thead>
         <tr class="table-primary">
-          <th>Opc</th>
+          <th>Opciones</th>
           <th>Documento</th>
           <th>Nombre</th>
           <th>Sexo</th>

@@ -15,10 +15,11 @@ import HelloWorld from "./components/HelloWorld.vue";
       <RouterLink to="/dashboard">Dashboard</RouterLink>
     </nav>
     <br>
+   
+
     <RouterView />
-
-
   </div>
+
 </template>
 
 <style scoped>

@@ -21,10 +21,10 @@
       <table class="table">
         <thead>
           <tr>
-            <th scope="col">Nit</th>
-            <th scope="col">Nombre</th>
-            <th scope="col">Estado</th>
-            <th scope="col">Opciones</th>
+            <th> <strong>NIT</strong></th>
+            <th> <strong>NOMBRE</strong></th>
+            <th> <strong>ESTADO</strong></th>
+            <th> <strong>OPCIONES</strong></th>
           </tr>
         </thead>
         <tbody>
@@ -229,10 +229,10 @@
             <table class="table table-sm">
               <thead>
                 <tr>
-                  <th scope="col">id</th>
-                  <th scope="col">Nombre</th>
-                  <th scope="col">Ciudad</th>
-                  <th scope="col">Direccion</th>
+                  <th> <strong>ID</strong></th>
+                  <th> <strong>NOMBRE</strong></th>
+                  <th> <strong>CUPS</strong></th>
+                  <th> <strong>DIRECCION</strong></th>
                   <th>Estado</th>
                   <th>Opc</th>
                 </tr>
