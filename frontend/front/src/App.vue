@@ -24,7 +24,7 @@ import {
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
-    align-items: center !important;
+
     font-size: 0.8rem !important;
 }
 

@@ -9,6 +9,12 @@
   temp max y temp min
    
 
+  administrar y configurar roles de ips 
+
+traslados 
+devoluciones
+reporte de eventos adversos
+
 </template>
 
 <script>

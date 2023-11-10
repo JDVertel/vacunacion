@@ -1,20 +1,22 @@
 <template>
 <br>
-<h5 class="display-6">Nevera IPS</h5>
+<h5 class="display-6">Almacen IPS</h5>
 <div class="container-fluid">
-    <h6>Seleccione una nevera para realizar operaciones</h6>
-    <select class="form-select form-select-sm" aria-label="Small select example">
-        <option selected>Neveras de almacenamiento</option>
-        <option value="1">Nevera 1</option>
-        <option value="2">Congelador 1</option>
-        <option value="3">Congelador 1</option>
-    </select>
+
 
     <br>
     <div class="row">
         <div class="col-12 col-md-6">
             <div class="container vitrina">
-                <h6>Registro de temperatura</h6>
+                <h6>Registro de temperatura de neveras</h6>
+                <hr>
+                <h6>Seleccione una nevera para realizar un registro</h6>
+                <select class="form-select form-select-sm" aria-label="Small select example">
+                    <option selected>Neveras de almacenamiento</option>
+                    <option value="1">Nevera 1</option>
+                    <option value="2">Congelador 1</option>
+                    <option value="3">Congelador 1</option>
+                </select>
                 <hr>
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
@@ -23,8 +25,6 @@
                     <li class="nav-item" role="presentation">
                         <button class="nav-link " id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="false">+ Registro</button>
                     </li>
-                  
-
                 </ul>
 
                 <!-- Tab panes -->
@@ -32,6 +32,7 @@
                     <div class="tab-pane " id="home" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
                         <h6>Registro de Temperatura de nevera</h6>
                         <hr>
+                     
                         <div class="container">
 
                             <div class="row">
@@ -95,6 +96,7 @@
                     <table class="table">
                         <thead>
                             <tr>
+                                <th>Ubicacion</th>
                                 <th scope="col">Cant</th>
                                 <th scope="col">Biologico</th>
                                 <th scope="col">Lote</th>
@@ -103,21 +105,21 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
+                            <tr>         <td>Mark</td>
                                 <th scope="row">1</th>
                                 <td>Mark</td>
                                 <td>Otto</td>
                                 <td>@mdo</td>
                                 <td><button type="button" class="btn btn-primary btn-sm">Detalle</button></td>
                             </tr>
-                            <tr>
+                            <tr>         <td>Mark</td>
                                 <th scope="row">2</th>
                                 <td>Jacob</td>
                                 <td>Thornton</td>
                                 <td>@fat</td>
                                 <td><button type="button" class="btn btn-primary btn-sm">Detalle</button></td>
                             </tr>
-                            <tr>
+                            <tr>         <td>Mark</td>
                                 <th scope="row">3</th>
                                 <td>Larry the Bird</td>
                                 <td>@twitter</td>
