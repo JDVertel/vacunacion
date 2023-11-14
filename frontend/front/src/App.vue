@@ -11,7 +11,7 @@ import {
     <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/dashboard">Dashboard</RouterLink>
+        <RouterLink to="/dashboard" v-if="this.auth">Dashboard</RouterLink>
     </nav>
     <br>
     <RouterView />

@@ -71,8 +71,8 @@ export const dosis=[
 
 export const usuarios=[
 {
-    nombre:"jdvertel",
-    passw:"13862306",
+    nombre:"vacunacion",
+    passw:"2023",
     rol:"super"
 },{
     nombre:"ips",

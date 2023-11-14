@@ -1,6 +1,6 @@
 <template>
     <h1>Ingresos</h1>
-  ingreso de vacunas especirficando la sucursal y nevera de almacenamiento
+  ingreso de vacunas especificando la sucursal y nevera de almacenamiento
   </template>
   
   <script>
